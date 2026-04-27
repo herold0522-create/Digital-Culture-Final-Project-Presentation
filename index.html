@@ -9,28 +9,28 @@
 <style>
 /* ─── Tokens ─── */
 :root {
-  --ink:       #0f0d14;
-  --ink-mid:   #3a3348;
-  --ink-light: #7a6e90;
-  --paper:     #f4f2f8;
-  --paper2:    #ebe8f2;
-  --amber:     #8b5cf6;
-  --amber-lt:  #ede9fe;
-  --green:     #1a0e2e;
-  --green-lt:  #ddd6fe;
-  --red:       #6d28d9;
-  --red-lt:    #ede9fe;
-  --rule:      rgba(15,13,20,.12);
-  --white:     #ffffff;
+  --ink:       #0f0d14;
+  --ink-mid:   #3a3348;
+  --ink-light: #7a6e90;
+  --paper:     #f4f2f8;
+  --paper2:    #ebe8f2;
+  --amber:     #8b5cf6;
+  --amber-lt:  #ede9fe;
+  --green:     #1a0e2e;
+  --green-lt:  #ddd6fe;
+  --red:       #6d28d9;
+  --red-lt:    #ede9fe;
+  --rule:      rgba(15,13,20,.12);
+  --white:     #ffffff;
 }
 
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; }
 body {
-  font-family:'Noto Serif SC', 'Libre Baskerville', serif;
-  background:var(--paper);
-  color:var(--ink);
-  overflow-x:hidden;
+  font-family:'Noto Serif SC', 'Libre Baskerville', serif;
+  background:var(--paper);
+  color:var(--ink);
+  overflow-x:hidden;
 }
 
 /* ─── Custom cursor ─── */
@@ -39,41 +39,41 @@ a, button { cursor: pointer; }
 
 /* ─── GRAIN overlay ─── */
 body::after {
-  content:'';
-  position:fixed; inset:0; pointer-events:none; z-index:9999;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity:.4; mix-blend-mode:multiply;
+  content:'';
+  position:fixed; inset:0; pointer-events:none; z-index:9999;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity:.4; mix-blend-mode:multiply;
 }
 
 /* ─── NAV ─── */
 nav {
-  position:sticky; top:0; z-index:100;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:0 56px;
-  height:52px;
-  background:var(--ink);
-  border-bottom:3px solid var(--amber);
+  position:sticky; top:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 56px;
+  height:52px;
+  background:var(--ink);
+  border-bottom:3px solid var(--amber);
 }
 .nav-logo {
-  font-family:'DM Mono', monospace;
-  font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--paper); text-decoration:none;
+  font-family:'DM Mono', monospace;
+  font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--paper); text-decoration:none;
 }
 .nav-logo em { color:var(--amber); font-style:normal; }
 .nav-links { display:flex; gap:28px; list-style:none; }
 .nav-links a {
-  font-family:'DM Mono', monospace;
-  font-size:10px; font-weight:400; letter-spacing:.15em; text-transform:uppercase;
-  color:rgba(245,242,235,.5); text-decoration:none; transition:color .2s;
+  font-family:'DM Mono', monospace;
+  font-size:10px; font-weight:400; letter-spacing:.15em; text-transform:uppercase;
+  color:rgba(245,242,235,.5); text-decoration:none; transition:color .2s;
 }
 .nav-links a:hover { color:var(--amber); }
 .nav-ctas { display:flex; gap:10px; }
 .nav-pill {
-  font-family:'DM Mono', monospace;
-  font-size:10px; font-weight:500; letter-spacing:.12em; text-transform:uppercase;
-  border:1px solid rgba(245,242,235,.25); border-radius:2px;
-  padding:6px 14px; color:var(--paper); text-decoration:none;
-  transition:all .2s; background:transparent;
+  font-family:'DM Mono', monospace;
+  font-size:10px; font-weight:500; letter-spacing:.12em; text-transform:uppercase;
+  border:1px solid rgba(245,242,235,.25); border-radius:2px;
+  padding:6px 14px; color:var(--paper); text-decoration:none;
+  transition:all .2s; background:transparent;
 }
 .nav-pill:hover { background:var(--amber); border-color:var(--amber); color:var(--ink); }
 .nav-pill.primary { background:var(--amber); border-color:var(--amber); color:var(--ink); }
@@ -81,54 +81,54 @@ nav {
 
 /* ─── HERO MASTHEAD ─── */
 .masthead {
-  background:var(--ink);
-  padding:80px 56px 64px;
-  position:relative; overflow:hidden;
+  background:var(--ink);
+  padding:80px 56px 64px;
+  position:relative; overflow:hidden;
 }
 .masthead::before {
-  content:'';
-  position:absolute; top:0; left:0; right:0; height:3px;
-  background:linear-gradient(90deg,#8b5cf6,#6d28d9,#4c1d95);
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,#8b5cf6,#6d28d9,#4c1d95);
 }
 /* big decorative number */
 .masthead-bg-num {
-  position:absolute; right:-20px; top:-40px;
-  font-family:'Libre Baskerville', serif;
-  font-size:400px; font-weight:700; line-height:1;
-  color:rgba(255,255,255,.03); pointer-events:none; user-select:none;
+  position:absolute; right:-20px; top:-40px;
+  font-family:'Libre Baskerville', serif;
+  font-size:400px; font-weight:700; line-height:1;
+  color:rgba(255,255,255,.03); pointer-events:none; user-select:none;
 }
 .masthead-inner { max-width:1100px; margin:0 auto; position:relative; z-index:1; }
 .masthead-tag {
-  font-family:'DM Mono', monospace;
-  font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase;
-  color:var(--amber); margin-bottom:28px;
-  display:flex; align-items:center; gap:12px;
+  font-family:'DM Mono', monospace;
+  font-size:10px; font-weight:500; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--amber); margin-bottom:28px;
+  display:flex; align-items:center; gap:12px;
 }
 .masthead-tag::before { content:''; display:block; width:32px; height:1px; background:var(--amber); }
 .masthead-h1 {
-  font-family:'Noto Serif SC', serif;
-  font-size:clamp(3rem,7vw,7rem); font-weight:900; line-height:.92;
-  letter-spacing:-.04em; color:var(--paper);
-  margin-bottom:40px;
+  font-family:'Noto Serif SC', serif;
+  font-size:clamp(3rem,7vw,7rem); font-weight:900; line-height:.92;
+  letter-spacing:-.04em; color:var(--paper);
+  margin-bottom:40px;
 }
 .masthead-h1 .outline {
-  -webkit-text-stroke:1.5px var(--paper); color:transparent;
+  -webkit-text-stroke:1.5px var(--paper); color:transparent;
 }
 .masthead-h1 .amber { color:var(--amber); }
 .masthead-rule { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:48px; padding-top:32px; border-top:1px solid rgba(245,242,235,.12); }
 .masthead-meta { display:flex; flex-direction:column; gap:6px; }
 .masthead-meta-label {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase;
-  color:rgba(245,242,235,.35);
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase;
+  color:rgba(245,242,235,.35);
 }
 .masthead-meta-value { font-size:14px; font-weight:300; color:rgba(245,242,235,.8); line-height:1.6; }
 
 /* scroll indicator */
 .scroll-hint {
-  display:flex; align-items:center; gap:10px;
-  font-family:'DM Mono', monospace;
-  font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-  color:rgba(245,242,235,.3); margin-top:48px;
+  display:flex; align-items:center; gap:10px;
+  font-family:'DM Mono', monospace;
+  font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(245,242,235,.3); margin-top:48px;
 }
 .scroll-line { width:40px; height:1px; background:rgba(245,242,235,.2); }
 
@@ -137,23 +137,23 @@ nav {
 .container { max-width:1100px; margin:0 auto; }
 
 .section-header {
-  display:flex; align-items:baseline; gap:20px;
-  margin-bottom:56px; padding-bottom:16px;
-  border-bottom:2px solid var(--ink);
+  display:flex; align-items:baseline; gap:20px;
+  margin-bottom:56px; padding-bottom:16px;
+  border-bottom:2px solid var(--ink);
 }
 .section-num {
-  font-family:'DM Mono', monospace;
-  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--ink-light); flex-shrink:0;
+  font-family:'DM Mono', monospace;
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-light); flex-shrink:0;
 }
 .section-title {
-  font-family:'Noto Serif SC', serif;
-  font-size:clamp(1.8rem,4vw,3.2rem); font-weight:700;
-  line-height:1.1; letter-spacing:-.03em; color:var(--ink);
+  font-family:'Noto Serif SC', serif;
+  font-size:clamp(1.8rem,4vw,3.2rem); font-weight:700;
+  line-height:1.1; letter-spacing:-.03em; color:var(--ink);
 }
 .section-sub {
-  font-size:15px; font-weight:300; color:var(--ink-mid);
-  line-height:1.85; max-width:680px;
+  font-size:15px; font-weight:300; color:var(--ink-mid);
+  line-height:1.85; max-width:680px;
 }
 
 /* ─── REVEAL ─── */
@@ -164,36 +164,36 @@ nav {
 /* ─── §1 INSIGHT MAP ─── */
 .insight-section { background:var(--paper); }
 .insight-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px; background:var(--rule);
-  border:1px solid var(--rule); margin-top:56px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--rule);
+  border:1px solid var(--rule); margin-top:56px;
 }
 .insight-cell {
-  background:var(--paper); padding:32px 28px;
-  position:relative; overflow:hidden;
-  transition:background .3s;
+  background:var(--paper); padding:32px 28px;
+  position:relative; overflow:hidden;
+  transition:background .3s;
 }
 .insight-cell:hover { background:var(--paper2); }
 .insight-cell::before {
-  content:attr(data-idx);
-  position:absolute; top:20px; right:20px;
-  font-family:'DM Mono', monospace;
-  font-size:10px; letter-spacing:.2em; color:var(--ink-light); opacity:.5;
+  content:attr(data-idx);
+  position:absolute; top:20px; right:20px;
+  font-family:'DM Mono', monospace;
+  font-size:10px; letter-spacing:.2em; color:var(--ink-light); opacity:.5;
 }
 .ic-tag {
-  font-family:'DM Mono', monospace;
-  font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-  margin-bottom:16px; display:inline-block;
-  padding:3px 8px; border-radius:1px;
+  font-family:'DM Mono', monospace;
+  font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  margin-bottom:16px; display:inline-block;
+  padding:3px 8px; border-radius:1px;
 }
 .ic-tag.amber { background:var(--amber-lt); color:var(--amber); }
 .ic-tag.green { background:var(--green-lt); color:var(--green); }
-.ic-tag.red   { background:var(--red-lt);   color:var(--red); }
+.ic-tag.red   { background:var(--red-lt);   color:var(--red); }
 .ic-quote {
-  font-family:'Libre Baskerville', serif;
-  font-size:18px; font-weight:700; font-style:italic;
-  line-height:1.45; color:var(--ink); margin-bottom:16px;
+  font-family:'Libre Baskerville', serif;
+  font-size:18px; font-weight:700; font-style:italic;
+  line-height:1.45; color:var(--ink); margin-bottom:16px;
 }
 .ic-body { font-size:13px; font-weight:300; color:var(--ink-mid); line-height:1.75; }
 
@@ -201,166 +201,166 @@ nav {
 .portrait-section { background:var(--paper2); }
 .portrait-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
 .portrait-card {
-  background:var(--paper); border:1px solid var(--rule);
-  padding:0; overflow:hidden;
-  position:relative;
-  transition:box-shadow .3s;
+  background:var(--paper); border:1px solid var(--rule);
+  padding:0; overflow:hidden;
+  position:relative;
+  transition:box-shadow .3s;
 }
 .portrait-card:hover { box-shadow:0 16px 48px rgba(15,14,11,.1); }
 .pc-header {
-  padding:28px 32px 24px;
-  display:flex; align-items:flex-start; gap:20px;
-  border-bottom:1px solid var(--rule);
+  padding:28px 32px 24px;
+  display:flex; align-items:flex-start; gap:20px;
+  border-bottom:1px solid var(--rule);
 }
 .pc-avatar {
-  width:56px; height:56px; border-radius:50%; flex-shrink:0;
-  display:flex; align-items:center; justify-content:center;
-  font-size:24px; border:2px solid var(--ink);
+  width:56px; height:56px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:24px; border:2px solid var(--ink);
 }
 .pc-type {
-  font-family:'DM Mono', monospace;
-  font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--ink-light); margin-bottom:4px;
+  font-family:'DM Mono', monospace;
+  font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-light); margin-bottom:4px;
 }
 .pc-name { font-size:20px; font-weight:700; color:var(--ink); line-height:1.2; margin-bottom:8px; }
 .pc-tags { display:flex; flex-wrap:wrap; gap:6px; }
 .pc-tag {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.1em;
-  padding:3px 8px; border:1px solid var(--rule); color:var(--ink-mid);
-  background:var(--paper2);
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.1em;
+  padding:3px 8px; border:1px solid var(--rule); color:var(--ink-mid);
+  background:var(--paper2);
 }
 .pc-body { padding:24px 32px; }
 .pc-section-label {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--ink-light); margin-bottom:10px; margin-top:20px;
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-light); margin-bottom:10px; margin-top:20px;
 }
 .pc-section-label:first-child { margin-top:0; }
 .pc-text { font-size:13px; font-weight:300; color:var(--ink-mid); line-height:1.75; }
 .pc-quote-block {
-  margin-top:16px; padding:14px 18px;
-  background:var(--paper2); border-left:3px solid var(--amber);
+  margin-top:16px; padding:14px 18px;
+  background:var(--paper2); border-left:3px solid var(--amber);
 }
 .pc-quote-block p {
-  font-family:'Libre Baskerville', serif;
-  font-size:13px; font-style:italic; color:var(--ink-mid); line-height:1.7;
+  font-family:'Libre Baskerville', serif;
+  font-size:13px; font-style:italic; color:var(--ink-mid); line-height:1.7;
 }
 
 /* ─── §3 PAIN POINTS ─── */
 .pain-section { background:var(--ink); position:relative; overflow:hidden; }
 .pain-section::before {
-  content:''; position:absolute; inset:0; pointer-events:none;
-  background:repeating-linear-gradient(0deg,transparent,transparent 47px,rgba(245,242,235,.03) 47px,rgba(245,242,235,.03) 48px),
-             repeating-linear-gradient(90deg,transparent,transparent 47px,rgba(245,242,235,.03) 47px,rgba(245,242,235,.03) 48px);
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 47px,rgba(245,242,235,.03) 47px,rgba(245,242,235,.03) 48px),
+             repeating-linear-gradient(90deg,transparent,transparent 47px,rgba(245,242,235,.03) 47px,rgba(245,242,235,.03) 48px);
 }
 .pain-section .section-title { color:var(--paper); }
 .pain-section .section-num { color:rgba(245,242,235,.3); }
 .pain-section .section-header { border-color:rgba(245,242,235,.15); }
 .pain-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
 .pain-card {
-  background:rgba(245,242,235,.04); border:1px solid rgba(245,242,235,.08);
-  padding:28px 28px 32px; position:relative;
-  transition:background .3s, border-color .3s;
+  background:rgba(245,242,235,.04); border:1px solid rgba(245,242,235,.08);
+  padding:28px 28px 32px; position:relative;
+  transition:background .3s, border-color .3s;
 }
 .pain-card:hover { background:rgba(245,242,235,.07); border-color:rgba(200,134,10,.4); }
 .pain-num {
-  font-family:'DM Mono', monospace;
-  font-size:48px; font-weight:300; line-height:1;
-  color:rgba(245,242,235,.06); margin-bottom:16px;
-  letter-spacing:-.05em;
+  font-family:'DM Mono', monospace;
+  font-size:48px; font-weight:300; line-height:1;
+  color:rgba(245,242,235,.06); margin-bottom:16px;
+  letter-spacing:-.05em;
 }
 .pain-title { font-size:17px; font-weight:600; color:var(--paper); margin-bottom:10px; line-height:1.35; }
 .pain-body { font-size:13px; font-weight:300; color:rgba(245,242,235,.55); line-height:1.8; }
 .pain-arrow {
-  position:absolute; bottom:24px; right:24px;
-  font-family:'DM Mono', monospace; font-size:18px;
-  color:rgba(245,242,235,.15); transition:color .2s, transform .2s;
+  position:absolute; bottom:24px; right:24px;
+  font-family:'DM Mono', monospace; font-size:18px;
+  color:rgba(245,242,235,.15); transition:color .2s, transform .2s;
 }
 .pain-card:hover .pain-arrow { color:var(--amber); transform:translateX(4px); }
 .pain-vs {
-  grid-column:1/-1; display:grid; grid-template-columns:1fr auto 1fr;
-  align-items:center; gap:24px; margin-top:8px;
-  padding:24px 28px; border:1px solid rgba(245,242,235,.08);
-  background:rgba(245,242,235,.03);
+  grid-column:1/-1; display:grid; grid-template-columns:1fr auto 1fr;
+  align-items:center; gap:24px; margin-top:8px;
+  padding:24px 28px; border:1px solid rgba(245,242,235,.08);
+  background:rgba(245,242,235,.03);
 }
 .pain-vs-label {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-  color:rgba(245,242,235,.3); margin-bottom:8px;
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(245,242,235,.3); margin-bottom:8px;
 }
 .pain-vs-text { font-size:14px; color:rgba(245,242,235,.7); line-height:1.65; }
 .pain-vs-divider {
-  font-family:'Libre Baskerville', serif;
-  font-size:28px; font-style:italic; color:var(--amber);
-  font-weight:700; text-align:center;
+  font-family:'Libre Baskerville', serif;
+  font-size:28px; font-style:italic; color:var(--amber);
+  font-weight:700; text-align:center;
 }
 
 /* ─── §4 RESEARCH PROCESS ─── */
 .research-section { background:var(--paper); }
 .research-timeline { position:relative; }
 .research-timeline::before {
-  content:''; position:absolute; left:0; top:0; bottom:0; width:1px;
-  background:var(--rule);
+  content:''; position:absolute; left:0; top:0; bottom:0; width:1px;
+  background:var(--rule);
 }
 .rt-item {
-  display:grid; grid-template-columns:200px 1fr;
-  gap:40px; margin-bottom:0;
-  padding:40px 0 40px 40px;
-  border-bottom:1px solid var(--rule);
-  position:relative;
+  display:grid; grid-template-columns:200px 1fr;
+  gap:40px; margin-bottom:0;
+  padding:40px 0 40px 40px;
+  border-bottom:1px solid var(--rule);
+  position:relative;
 }
 .rt-item::before {
-  content:'';
-  position:absolute; left:-5px; top:44px;
-  width:10px; height:10px; border-radius:50%;
-  background:var(--paper); border:2px solid var(--ink);
-  transition:background .2s;
+  content:'';
+  position:absolute; left:-5px; top:44px;
+  width:10px; height:10px; border-radius:50%;
+  background:var(--paper); border:2px solid var(--ink);
+  transition:background .2s;
 }
 .rt-item:hover::before { background:var(--amber); border-color:var(--amber); }
 .rt-item:last-child { border-bottom:none; }
 .rt-meta { display:flex; flex-direction:column; gap:6px; padding-top:2px; }
 .rt-phase {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--ink-light);
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-light);
 }
 .rt-date { font-size:20px; font-weight:700; color:var(--ink); line-height:1.1; }
 .rt-team {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.05em;
-  color:var(--ink-light); margin-top:8px;
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.05em;
+  color:var(--ink-light); margin-top:8px;
 }
 .rt-content h3 { font-size:20px; font-weight:700; color:var(--ink); margin-bottom:10px; line-height:1.25; }
 .rt-content p { font-size:13px; font-weight:300; color:var(--ink-mid); line-height:1.8; margin-bottom:16px; }
 .rt-tag {
-  display:inline-block; font-family:'DM Mono', monospace;
-  font-size:9px; letter-spacing:.15em; text-transform:uppercase;
-  padding:3px 10px; border:1px solid var(--rule); color:var(--ink-mid);
-  margin-right:8px; margin-bottom:6px;
+  display:inline-block; font-family:'DM Mono', monospace;
+  font-size:9px; letter-spacing:.15em; text-transform:uppercase;
+  padding:3px 10px; border:1px solid var(--rule); color:var(--ink-mid);
+  margin-right:8px; margin-bottom:6px;
 }
 .rt-finding {
-  margin-top:16px; padding:16px 20px;
-  background:var(--paper2); border-left:3px solid var(--green);
-  font-size:13px; font-style:italic; color:var(--ink-mid); line-height:1.7;
+  margin-top:16px; padding:16px 20px;
+  background:var(--paper2); border-left:3px solid var(--green);
+  font-size:13px; font-style:italic; color:var(--ink-mid); line-height:1.7;
 }
 
 /* ─── §5 ITERATION ─── */
 .iter-section { background:var(--paper2); }
 .iter-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .iter-card {
-  background:var(--paper); border:1px solid var(--rule);
-  padding:0; overflow:hidden; transition:box-shadow .3s;
+  background:var(--paper); border:1px solid var(--rule);
+  padding:0; overflow:hidden; transition:box-shadow .3s;
 }
 .iter-card:hover { box-shadow:0 12px 40px rgba(15,14,11,.09); }
 .iter-card-header {
-  padding:20px 24px 16px;
-  display:flex; align-items:center; justify-content:space-between;
-  border-bottom:1px solid var(--rule);
+  padding:20px 24px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-bottom:1px solid var(--rule);
 }
 .iter-ver {
-  font-family:'DM Mono', monospace;
-  font-size:28px; font-weight:300; color:var(--ink);
-  letter-spacing:-.05em; line-height:1;
+  font-family:'DM Mono', monospace;
+  font-size:28px; font-weight:300; color:var(--ink);
+  letter-spacing:-.05em; line-height:1;
 }
 .iter-status {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
-  padding:4px 10px; border-radius:1px;
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  padding:4px 10px; border-radius:1px;
 }
 .iter-status.done { background:var(--green-lt); color:var(--green); }
 .iter-status.current { background:var(--amber-lt); color:var(--amber); }
@@ -368,19 +368,19 @@ nav {
 .iter-title { font-size:15px; font-weight:700; color:var(--ink); margin-bottom:10px; line-height:1.35; }
 .iter-changes { list-style:none; display:flex; flex-direction:column; gap:8px; }
 .iter-changes li {
-  display:flex; align-items:flex-start; gap:10px;
-  font-size:12px; font-weight:300; color:var(--ink-mid); line-height:1.6;
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:12px; font-weight:300; color:var(--ink-mid); line-height:1.6;
 }
 .iter-changes li::before {
-  content:'→'; font-family:'DM Mono', monospace;
-  font-size:10px; color:var(--amber); flex-shrink:0; margin-top:2px;
+  content:'→'; font-family:'DM Mono', monospace;
+  font-size:10px; color:var(--amber); flex-shrink:0; margin-top:2px;
 }
 .iter-link {
-  display:block; margin-top:18px; padding:8px 14px;
-  border:1px solid var(--rule); font-family:'DM Mono', monospace;
-  font-size:9px; letter-spacing:.15em; text-transform:uppercase;
-  color:var(--ink-mid); text-decoration:none; text-align:center;
-  transition:all .2s;
+  display:block; margin-top:18px; padding:8px 14px;
+  border:1px solid var(--rule); font-family:'DM Mono', monospace;
+  font-size:9px; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--ink-mid); text-decoration:none; text-align:center;
+  transition:all .2s;
 }
 .iter-link:hover { background:var(--ink); color:var(--paper); border-color:var(--ink); }
 
@@ -391,792 +391,817 @@ nav {
 .dual-section .section-header { border-color:rgba(245,242,235,.15); }
 .dual-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(245,242,235,.08); margin-top:8px; }
 .dual-card {
-  background:var(--ink); padding:48px 40px;
-  position:relative; overflow:hidden;
-  transition:background .3s;
+  background:var(--ink); padding:48px 40px;
+  position:relative; overflow:hidden;
+  transition:background .3s;
 }
 .dual-card:hover { background:#161410; }
 .dual-card-num {
-  font-family:'Libre Baskerville', serif;
-  font-size:120px; font-weight:700; line-height:1;
-  position:absolute; right:-10px; top:-20px;
-  opacity:.04; pointer-events:none; color:var(--paper);
+  font-family:'Libre Baskerville', serif;
+  font-size:120px; font-weight:700; line-height:1;
+  position:absolute; right:-10px; top:-20px;
+  opacity:.04; pointer-events:none; color:var(--paper);
 }
 .dual-card-icon {
-  width:52px; height:52px; border:1px solid rgba(245,242,235,.15);
-  border-radius:2px; display:flex; align-items:center; justify-content:center;
-  font-size:22px; margin-bottom:24px; position:relative; z-index:1;
+  width:52px; height:52px; border:1px solid rgba(245,242,235,.15);
+  border-radius:2px; display:flex; align-items:center; justify-content:center;
+  font-size:22px; margin-bottom:24px; position:relative; z-index:1;
 }
 .dual-card-label {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase;
-  color:var(--amber); margin-bottom:12px; position:relative; z-index:1;
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase;
+  color:var(--amber); margin-bottom:12px; position:relative; z-index:1;
 }
 .dual-card-title {
-  font-family:'Noto Serif SC', serif;
-  font-size:24px; font-weight:700; color:var(--paper);
-  line-height:1.2; margin-bottom:16px; position:relative; z-index:1;
+  font-family:'Noto Serif SC', serif;
+  font-size:24px; font-weight:700; color:var(--paper);
+  line-height:1.2; margin-bottom:16px; position:relative; z-index:1;
 }
 .dual-card-body {
-  font-size:13px; font-weight:300; color:rgba(245,242,235,.55);
-  line-height:1.85; position:relative; z-index:1; margin-bottom:24px;
+  font-size:13px; font-weight:300; color:rgba(245,242,235,.55);
+  line-height:1.85; position:relative; z-index:1; margin-bottom:24px;
 }
 .dual-card-features { list-style:none; display:flex; flex-direction:column; gap:10px; position:relative; z-index:1; }
 .dual-card-features li {
-  display:flex; align-items:flex-start; gap:10px;
-  font-family:'DM Mono', monospace; font-size:11px;
-  color:rgba(245,242,235,.6); line-height:1.5;
+  display:flex; align-items:flex-start; gap:10px;
+  font-family:'DM Mono', monospace; font-size:11px;
+  color:rgba(245,242,235,.6); line-height:1.5;
 }
 .dual-card-features li::before {
-  content:''; display:block; width:16px; height:1px;
-  background:var(--amber); flex-shrink:0; margin-top:8px;
+  content:''; display:block; width:16px; height:1px;
+  background:var(--amber); flex-shrink:0; margin-top:8px;
 }
 .dual-divider {
-  grid-column:1/-1; padding:28px 40px;
-  background:rgba(200,134,10,.08); border-top:1px solid rgba(200,134,10,.2);
-  font-size:13px; font-style:italic; color:rgba(245,242,235,.5);
-  font-family:'Libre Baskerville', serif; line-height:1.75; text-align:center;
+  grid-column:1/-1; padding:28px 40px;
+  background:rgba(200,134,10,.08); border-top:1px solid rgba(200,134,10,.2);
+  font-size:13px; font-style:italic; color:rgba(245,242,235,.5);
+  font-family:'Libre Baskerville', serif; line-height:1.75; text-align:center;
 }
 
 /* ─── §7 STATS STRIP ─── */
 .stats-strip {
-  background:var(--amber); padding:0;
+  background:var(--amber); padding:0;
 }
 .stats-inner {
-  max-width:1100px; margin:0 auto;
-  display:grid; grid-template-columns:repeat(5,1fr);
-  border-left:1px solid rgba(15,14,11,.12);
+  max-width:1100px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(5,1fr);
+  border-left:1px solid rgba(15,14,11,.12);
 }
 .stat-block {
-  padding:36px 28px; border-right:1px solid rgba(15,14,11,.12);
-  text-align:left;
+  padding:36px 28px; border-right:1px solid rgba(15,14,11,.12);
+  text-align:left;
 }
 .stat-num {
-  font-family:'Libre Baskerville', serif;
-  font-size:clamp(2rem,4vw,3.5rem); font-weight:700;
-  color:var(--ink); line-height:1; margin-bottom:6px; letter-spacing:-.04em;
+  font-family:'Libre Baskerville', serif;
+  font-size:clamp(2rem,4vw,3.5rem); font-weight:700;
+  color:var(--ink); line-height:1; margin-bottom:6px; letter-spacing:-.04em;
 }
 .stat-label {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em;
-  text-transform:uppercase; color:rgba(15,14,11,.5);
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.2em;
+  text-transform:uppercase; color:rgba(15,14,11,.5);
 }
 
 /* ─── §8 CTA / LINKS ─── */
 .cta-section { background:var(--paper); border-top:3px solid var(--ink); }
 .cta-inner { max-width:1100px; margin:0 auto; }
 .cta-lead {
-  font-family:'Noto Serif SC', serif;
-  font-size:clamp(2.5rem,6vw,5.5rem); font-weight:900;
-  line-height:.95; letter-spacing:-.04em; color:var(--ink);
-  margin-bottom:48px;
+  font-family:'Noto Serif SC', serif;
+  font-size:clamp(2.5rem,6vw,5.5rem); font-weight:900;
+  line-height:.95; letter-spacing:-.04em; color:var(--ink);
+  margin-bottom:48px;
 }
 .cta-lead .line2 { display:block; -webkit-text-stroke:1.5px var(--ink); color:transparent; }
 .cta-cards { display:grid; grid-template-columns:1fr 1fr; gap:3px; background:var(--rule); border:1px solid var(--rule); margin-bottom:48px; }
 .cta-card {
-  background:var(--paper); padding:40px;
-  display:flex; flex-direction:column; gap:16px;
-  text-decoration:none; transition:background .25s;
-  position:relative; overflow:hidden;
+  background:var(--paper); padding:40px;
+  display:flex; flex-direction:column; gap:16px;
+  text-decoration:none; transition:background .25s;
+  position:relative; overflow:hidden;
 }
 .cta-card:hover { background:var(--paper2); }
 .cta-card-tag {
-  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase;
-  color:var(--ink-light); display:flex; align-items:center; gap:10px;
+  font-family:'DM Mono', monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase;
+  color:var(--ink-light); display:flex; align-items:center; gap:10px;
 }
 .cta-card-tag::before { content:''; display:block; width:20px; height:1px; background:var(--ink-light); }
 .cta-card-title {
-  font-family:'Noto Serif SC', serif;
-  font-size:clamp(1.4rem,3vw,2.2rem); font-weight:700;
-  color:var(--ink); line-height:1.2; letter-spacing:-.02em;
+  font-family:'Noto Serif SC', serif;
+  font-size:clamp(1.4rem,3vw,2.2rem); font-weight:700;
+  color:var(--ink); line-height:1.2; letter-spacing:-.02em;
 }
 .cta-card-desc { font-size:13px; font-weight:300; color:var(--ink-mid); line-height:1.8; flex:1; }
 .cta-card-platform {
-  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase;
-  padding:10px 20px; border:1.5px solid var(--ink); display:inline-flex;
-  align-items:center; gap:8px; color:var(--ink); width:fit-content;
-  transition:all .2s;
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase;
+  padding:10px 20px; border:1.5px solid var(--ink); display:inline-flex;
+  align-items:center; gap:8px; color:var(--ink); width:fit-content;
+  transition:all .2s;
 }
 .cta-card:hover .cta-card-platform { background:var(--ink); color:var(--paper); }
 .cta-card.accent-amber { border-top:4px solid var(--amber); }
 .cta-card.accent-green { border-top:4px solid var(--green); }
 /* decorative bg char */
 .cta-card-bg {
-  position:absolute; right:24px; bottom:-20px;
-  font-family:'Libre Baskerville', serif;
-  font-size:120px; font-weight:700; color:rgba(15,14,11,.04);
-  pointer-events:none; line-height:1;
+  position:absolute; right:24px; bottom:-20px;
+  font-family:'Libre Baskerville', serif;
+  font-size:120px; font-weight:700; color:rgba(15,14,11,.04);
+  pointer-events:none; line-height:1;
 }
 
 /* footnote */
 .footnote {
-  padding:24px 0; border-top:1px solid var(--rule);
-  display:flex; justify-content:space-between; align-items:center;
-  flex-wrap:wrap; gap:16px;
+  padding:24px 0; border-top:1px solid var(--rule);
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:16px;
 }
 .footnote p {
-  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em;
-  color:var(--ink-light);
+  font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em;
+  color:var(--ink-light);
 }
 
 /* ─── FOOTER ─── */
 footer {
-  background:var(--ink); padding:40px 56px;
-  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+  background:var(--ink); padding:40px 56px;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
 }
 .footer-logo {
-  font-family:'DM Mono', monospace; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
-  color:rgba(245,242,235,.5);
+  font-family:'DM Mono', monospace; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(245,242,235,.5);
 }
 .footer-logo em { color:var(--amber); font-style:normal; }
 .footer-copy { font-family:'DM Mono', monospace; font-size:10px; letter-spacing:.1em; color:rgba(245,242,235,.25); }
 
 /* ─── PHOTO CAROUSEL ─── */
 .carousel-wrap {
-  margin-top:28px; position:relative; border-radius:4px; overflow:hidden;
-  background:var(--ink);
-  box-shadow:0 12px 40px rgba(15,13,20,.25);
+  margin-top:28px; position:relative; border-radius:4px; overflow:hidden;
+  background:var(--ink);
+  box-shadow:0 12px 40px rgba(15,13,20,.25);
 }
 .carousel-track {
-  display:flex; transition:transform .5s cubic-bezier(.4,0,.2,1);
+  display:flex; transition:transform .5s cubic-bezier(.4,0,.2,1);
 }
 .carousel-slide {
-  min-width:100%; position:relative;
+  min-width:100%; position:relative;
 }
 .carousel-slide img {
-  width:100%; height:240px; object-fit:cover; display:block;
-  filter:brightness(.88);
+  width:100%; height:240px; object-fit:cover; display:block;
+  filter:brightness(.88);
 }
 .carousel-caption {
-  position:absolute; bottom:0; left:0; right:0;
-  padding:10px 16px;
-  background:linear-gradient(to top,rgba(15,13,20,.85),transparent);
-  font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.15em;
-  text-transform:uppercase; color:rgba(255,255,255,.7);
+  position:absolute; bottom:0; left:0; right:0;
+  padding:10px 16px;
+  background:linear-gradient(to top,rgba(15,13,20,.85),transparent);
+  font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.15em;
+  text-transform:uppercase; color:rgba(255,255,255,.7);
 }
 .carousel-controls {
-  display:flex; align-items:center; justify-content:space-between;
-  padding:10px 14px; background:rgba(15,13,20,.6);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 14px; background:rgba(15,13,20,.6);
 }
 .carousel-dots { display:flex; gap:6px; }
 .carousel-dot {
-  width:6px; height:6px; border-radius:50%;
-  background:rgba(255,255,255,.25); cursor:pointer;
-  transition:background .2s, width .2s; border-radius:4px;
+  width:6px; height:6px; border-radius:50%;
+  background:rgba(255,255,255,.25); cursor:pointer;
+  transition:background .2s, width .2s; border-radius:4px;
 }
 .carousel-dot.active { background:var(--amber); width:18px; }
 .carousel-btn {
-  background:none; border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.6);
-  width:28px; height:28px; border-radius:2px; cursor:pointer;
-  font-size:13px; display:flex; align-items:center; justify-content:center;
-  transition:all .2s; font-family:'DM Mono',monospace;
+  background:none; border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.6);
+  width:28px; height:28px; border-radius:2px; cursor:pointer;
+  font-size:13px; display:flex; align-items:center; justify-content:center;
+  transition:all .2s; font-family:'DM Mono',monospace;
 }
 .carousel-btn:hover { background:var(--amber); border-color:var(--amber); color:var(--ink); }
 .carousel-btns { display:flex; gap:6px; }
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px) {
-  nav { padding:0 20px; }
-  .nav-links { display:none; }
-  .section { padding:64px 24px; }
-  .masthead { padding:60px 24px 48px; }
-  .insight-grid { grid-template-columns:1fr; }
-  .portrait-grid { grid-template-columns:1fr; }
-  .pain-grid { grid-template-columns:1fr; }
-  .iter-grid { grid-template-columns:1fr; }
-  .dual-grid { grid-template-columns:1fr; }
-  .stats-inner { grid-template-columns:repeat(2,1fr); border-left:none; }
-  .cta-cards { grid-template-columns:1fr; }
-  .rt-item { grid-template-columns:1fr; gap:16px; }
-  footer { padding:32px 24px; flex-direction:column; }
+  nav { padding:0 20px; }
+  .nav-links { display:none; }
+  .section { padding:64px 24px; }
+  .masthead { padding:60px 24px 48px; }
+  .insight-grid { grid-template-columns:1fr; }
+  .portrait-grid { grid-template-columns:1fr; }
+  .pain-grid { grid-template-columns:1fr; }
+  .iter-grid { grid-template-columns:1fr; }
+  .dual-grid { grid-template-columns:1fr; }
+  .stats-inner { grid-template-columns:repeat(2,1fr); border-left:none; }
+  .cta-cards { grid-template-columns:1fr; }
+  .rt-item { grid-template-columns:1fr; gap:16px; }
+  footer { padding:32px 24px; flex-direction:column; }
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">数字文化<em>.</em> 研究</a>
-  <ul class="nav-links">
-    <li><a href="#insight">洞察</a></li>
-    <li><a href="#portrait">用户画像</a></li>
-    <li><a href="#pain">痛点</a></li>
-    <li><a href="#research">调研</a></li>
-    <li><a href="#iteration">迭代</a></li>
-    <li><a href="#platform">双端</a></li>
-  </ul>
-  <div class="nav-ctas">
-    <a class="nav-pill" href="https://github.com/herold0522-create/Digital-Culture-Project-Info-mobile" target="_blank">移动端介绍 →</a>
-    <a class="nav-pill primary" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">进入产品 →</a>
-  </div>
+  <a class="nav-logo" href="#">数字文化<em>.</em> 研究</a>
+  <ul class="nav-links">
+    <li><a href="#insight">洞察</a></li>
+    <li><a href="#portrait">用户画像</a></li>
+    <li><a href="#pain">痛点</a></li>
+    <li><a href="#research">调研</a></li>
+    <li><a href="#iteration">迭代</a></li>
+    <li><a href="#platform">双端</a></li>
+  </ul>
+  <div class="nav-ctas">
+    <a class="nav-pill" href="https://github.com/herold0522-create/Digital-Culture-Project-Info-mobile" target="_blank">移动端介绍 →</a>
+    <a class="nav-pill primary" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">进入产品 →</a>
+  </div>
 </nav>
 
+<!-- MASTHEAD -->
 <div class="masthead">
-  <div class="masthead-bg-num">圈</div>
-  <div class="masthead-inner">
-    <div class="masthead-tag">福州大学至诚学院 · 数字文化课题组 · 2025</div>
-    <h1 class="masthead-h1">
-      <span class="outline">这个</span><span class="amber">圈子</span><br>
-      从何<span class="outline">而来</span>
-    </h1>
-    <p style="font-size:17px;font-weight:300;color:rgba(245,242,235,.65);max-width:560px;line-height:1.85;">
-      一份关于校园兴趣社群的田野调查报告。我们走进街舞练习室、动漫社的活动角落和书法国风社的笔墨天地，试图找到"圈子"形成的内在逻辑——并最终将它变成一个数字产品。
-    </p>
-    <div class="masthead-rule">
-      <div class="masthead-meta">
-        <div class="masthead-meta-label">调研对象</div>
-        <div class="masthead-meta-value">街舞社 · 动漫社 · 书法国风社<br>福州大学至诚学院在校生</div>
-      </div>
-      <div class="masthead-meta">
-        <div class="masthead-meta-label">课题组成员</div>
-        <div class="masthead-meta-value">刘依琳 张梦淋 李雨彤 杨诗真<br>张心如 林晓雨 陈婷婷 韦馨</div>
-      </div>
-    </div>
-    
-    <div style="margin-top:28px; display:inline-flex; align-items:center; gap:14px; padding:12px 22px; border:1px solid rgba(139,92,246,.35); background:rgba(139,92,246,.08); border-radius:2px;">
-      <span style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase; color:rgba(245,242,235,.4);">汇报人</span>
-      <span style="font-family:'Noto Serif SC',serif; font-size:17px; font-weight:700; color:var(--paper); letter-spacing:.05em;">韦 馨</span>
-      <span style="font-family:'DM Mono',monospace; font-size:9px; color:rgba(139,92,246,.8); letter-spacing:.1em;">汇报 · 212317333</span>
-    </div>
-        <div style="margin-top:12px; font-family:'Noto Serif SC',serif; font-size:13px; font-weight:400; color:rgba(245,242,235,.6); letter-spacing:.05em;">
-      Pre设计：林晓雨
-    </div>
-
-    <div class="scroll-hint"><div class="scroll-line"></div>向下阅读完整报告</div>
-  </div>
+  <div class="masthead-bg-num">圈</div>
+  <div class="masthead-inner">
+    <div class="masthead-tag">福州大学至诚学院 · 数字文化课题组 · 2025</div>
+    <h1 class="masthead-h1">
+      <span class="outline">这个</span><span class="amber">圈子</span><br>
+      从何<span class="outline">而来</span>
+    </h1>
+    <p style="font-size:17px;font-weight:300;color:rgba(245,242,235,.65);max-width:560px;line-height:1.85;">
+      一份关于校园兴趣社群的田野调查报告。我们走进街舞练习室、动漫社的活动角落和书法国风社的笔墨天地，试图找到"圈子"形成的内在逻辑——并最终将它变成一个数字产品。
+    </p>
+    <div class="masthead-rule">
+      <div class="masthead-meta">
+        <div class="masthead-meta-label">调研对象</div>
+        <div class="masthead-meta-value">街舞社 · 动漫社 · 书法国风社<br>福州大学至诚学院在校生</div>
+      </div>
+      <div class="masthead-meta">
+        <div class="masthead-meta-label">课题组成员</div>
+        <div class="masthead-meta-value">刘依琳 张梦淋 李雨彤 杨诗真<br>张心如 林晓雨 陈婷婷 韦馨</div>
+      </div>
+    </div>
+    <div style="margin-top:28px; display:inline-flex; align-items:center; gap:14px; padding:12px 22px; border:1px solid rgba(139,92,246,.35); background:rgba(139,92,246,.08); border-radius:2px;">
+      <span style="font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.25em; text-transform:uppercase; color:rgba(245,242,235,.4);">汇报人</span>
+      <span style="font-family:'Noto Serif SC',serif; font-size:17px; font-weight:700; color:var(--paper); letter-spacing:.05em;">韦 馨</span>
+      <span style="font-family:'DM Mono',monospace; font-size:9px; color:rgba(139,92,246,.8); letter-spacing:.1em;">汇报 · 212317333</span>
+    </div>
+    <div class="scroll-hint"><div class="scroll-line"></div>向下阅读完整报告</div>
+  </div>
 </div>
 
+<!-- §1 INSIGHT MAP -->
 <section class="insight-section section" id="insight">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num">§ 01</span>
-      <h2 class="section-title">圈子是什么？</h2>
-    </div>
-    <p class="section-sub reveal">在正式展开调研之前，我们先试图为"圈子"这个词绘制一张语义地图。从物理学的量子纠缠，到社会学的阶级理论，"圈子"这个概念涉及的维度远比想象中复杂。</p>
-    <div class="insight-grid">
-      <div class="insight-cell reveal d1" data-idx="01">
-        <div class="ic-tag amber">磁场与吸引</div>
-        <div class="ic-quote">"同频者之间存在某种磁场，默契与吸引先于语言发生。"</div>
-        <div class="ic-body">王楚钦和孙颖莎的"量子纠缠"不是玄学——它描述了一种真实存在的心理现象：当两个人有极度相似的兴趣模式与价值底层时，沟通成本几乎为零，这正是深度圈子的核心吸引力。</div>
-      </div>
-      <div class="insight-cell reveal d2" data-idx="02">
-        <div class="ic-tag green">圈层与边界</div>
-        <div class="ic-quote">"你路过街舞社的排练室，听见里面的音乐和笑声，却不敢推开那扇门。"</div>
-        <div class="ic-body">这种"门外的感觉"几乎每个人都有过——不是真的进不去，而是不知道自己算不算"那类人"。圈子的边界往往无形：一个你没听过的词，一个你不懂的梗，足以让人退缩。这种边界不是排外，是文化在自我保护。</div>
-      </div>
-      <div class="insight-cell reveal d3" data-idx="03">
-        <div class="ic-tag red">符号与默契</div>
-        <div class="ic-quote">"专属符号、暗语、默契——这些是圈子最真实的'货币'。"</div>
-        <div class="ic-body">摩斯密码是一种极端的"只有懂的人才能读取"的通信方式。兴趣圈子的内部语言本质上与此相同：它不是为了排外，而是确认"你是我们中的一员"这一身份归属的最有效方式。</div>
-      </div>
-      <div class="insight-cell reveal d1" data-idx="04">
-        <div class="ic-tag amber">参与式文化</div>
-        <div class="ic-quote">"核心不只是'参与'，更在于'共创'——每次即兴表达都是社群文化的具身演绎。"</div>
-        <div class="ic-body">社群的活力来源于成员主动的内容生产与意义赋予。这与大数据推荐机制的"温水煮青蛙"截然不同——主动共创让成员持续投入，被动消费让人在舒适区里缓慢流失。</div>
-      </div>
-      <div class="insight-cell reveal d2" data-idx="05">
-        <div class="ic-tag green">归属感建构</div>
-        <div class="ic-quote">"社群认同不是抽象的情感归属，而是在日常互动中'做出来'的。"</div>
-        <div class="ic-body">成员通过共同行动共享情绪、交换符号、建立默契，在一次次"在一起"中确认彼此的身份归属。线上线下的"重合时刻"尤为关键——它让数字社群有了现实温度。</div>
-      </div>
-      <div class="insight-cell reveal d3" data-idx="06">
-        <div class="ic-tag red">文化再生逻辑</div>
-        <div class="ic-quote">"线上建社群 → 线下做文化 → 线上固认同——这是可持续社群生态的完整回路。"</div>
-        <div class="ic-body">共同习惯、共同语言、集体价值观、集体记忆——这些要素构成了兴趣社群的文化DNA。一个真正健康的圈子，能在数字场域与现实空间之间反复流动，形成稳定的文化认同闭环。</div>
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">§ 01</span>
+      <h2 class="section-title">圈子是什么？</h2>
+    </div>
+    <p class="section-sub reveal">在正式展开调研之前，我们先试图为"圈子"这个词绘制一张语义地图。从物理学的量子纠缠，到社会学的阶级理论，"圈子"这个概念涉及的维度远比想象中复杂。</p>
+    <div class="insight-grid">
+      <div class="insight-cell reveal d1" data-idx="01">
+        <div class="ic-tag amber">磁场与吸引</div>
+        <div class="ic-quote">"同频者之间存在某种磁场，默契与吸引先于语言发生。"</div>
+        <div class="ic-body">王楚钦和孙颖莎的"量子纠缠"不是玄学——它描述了一种真实存在的心理现象：当两个人有极度相似的兴趣模式与价值底层时，沟通成本几乎为零，这正是深度圈子的核心吸引力。</div>
+      </div>
+      <div class="insight-cell reveal d2" data-idx="02">
+        <div class="ic-tag green">圈层与边界</div>
+        <div class="ic-quote">"你路过街舞社的排练室，听见里面的音乐和笑声，却不敢推开那扇门。"</div>
+        <div class="ic-body">这种"门外的感觉"几乎每个人都有过——不是真的进不去，而是不知道自己算不算"那类人"。圈子的边界往往无形：一个你没听过的词，一个你不懂的梗，足以让人退缩。这种边界不是排外，是文化在自我保护。</div>
+      </div>
+      <div class="insight-cell reveal d3" data-idx="03">
+        <div class="ic-tag red">符号与默契</div>
+        <div class="ic-quote">"专属符号、暗语、默契——这些是圈子最真实的'货币'。"</div>
+        <div class="ic-body">摩斯密码是一种极端的"只有懂的人才能读取"的通信方式。兴趣圈子的内部语言本质上与此相同：它不是为了排外，而是确认"你是我们中的一员"这一身份归属的最有效方式。</div>
+      </div>
+      <div class="insight-cell reveal d1" data-idx="04">
+        <div class="ic-tag amber">参与式文化</div>
+        <div class="ic-quote">"核心不只是'参与'，更在于'共创'——每次即兴表达都是社群文化的具身演绎。"</div>
+        <div class="ic-body">社群的活力来源于成员主动的内容生产与意义赋予。这与大数据推荐机制的"温水煮青蛙"截然不同——主动共创让成员持续投入，被动消费让人在舒适区里缓慢流失。</div>
+      </div>
+      <div class="insight-cell reveal d2" data-idx="05">
+        <div class="ic-tag green">归属感建构</div>
+        <div class="ic-quote">"社群认同不是抽象的情感归属，而是在日常互动中'做出来'的。"</div>
+        <div class="ic-body">成员通过共同行动共享情绪、交换符号、建立默契，在一次次"在一起"中确认彼此的身份归属。线上线下的"重合时刻"尤为关键——它让数字社群有了现实温度。</div>
+      </div>
+      <div class="insight-cell reveal d3" data-idx="06">
+        <div class="ic-tag red">文化再生逻辑</div>
+        <div class="ic-quote">"线上建社群 → 线下做文化 → 线上固认同——这是可持续社群生态的完整回路。"</div>
+        <div class="ic-body">共同习惯、共同语言、集体价值观、集体记忆——这些要素构成了兴趣社群的文化DNA。一个真正健康的圈子，能在数字场域与现实空间之间反复流动，形成稳定的文化认同闭环。</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- §2 USER PORTRAITS -->
 <section class="portrait-section section" id="portrait">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num">§ 02</span>
-      <h2 class="section-title">我们为谁而设计</h2>
-    </div>
-    <p class="section-sub reveal" style="margin-bottom:48px;">调研揭示了两类截然不同却相互依存的目标用户。他们有不同的焦虑，不同的需求，却共享同一个渴望：找到真正属于自己的那个圈子。</p>
-    <div class="portrait-grid">
-      <div class="portrait-card reveal d1">
-        <div class="pc-header">
-          <div class="pc-avatar" style="background:#d4ead9;">🎯</div>
-          <div>
-            <div class="pc-type">User Type A</div>
-            <div class="pc-name">深度圈内人</div>
-            <div class="pc-tags">
-              <span class="pc-tag">硬核玩家</span>
-              <span class="pc-tag">文化守护者</span>
-              <span class="pc-tag">渴望深度</span>
-              <span class="pc-tag">有科普意愿</span>
-            </div>
-          </div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-section-label">基础特征</div>
-          <p class="pc-text">18—25岁在校大学生。某兴趣圈子的深度参与者，可能是社团骨干或活跃分子。线上线下双活跃，熟悉圈内"黑话"、文化和规则，会主动创作内容。</p>
-          <div class="pc-section-label">核心需求</div>
-          <p class="pc-text">需要一个能进行专业探讨、沉淀集体记忆、且环境纯粹不被"潜水者"干扰的深度交流空间。同时也有向外科普、吸纳优质新人的意愿。</p>
-          <div class="pc-quote-block">
-            <p>"在B站看到高质量的国风设计内容，想认真讨论却只能在评论区发几个字——那种无处安放的感觉让人很沮丧。"</p>
-          </div>
-        </div>
-      </div>
-      <div class="portrait-card reveal d2">
-        <div class="pc-header">
-          <div class="pc-avatar" style="background:#f5e4b8;">🌱</div>
-          <div>
-            <div class="pc-type">User Type B</div>
-            <div class="pc-name">预备役同好</div>
-            <div class="pc-tags">
-              <span class="pc-tag">兴趣萌芽</span>
-              <span class="pc-tag">文化好奇者</span>
-              <span class="pc-tag">有融入焦虑</span>
-              <span class="pc-tag">渴望入门</span>
-            </div>
-          </div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-section-label">基础特征</div>
-          <p class="pc-text">对某兴趣领域有强烈好奇或初步喜爱，但尚未找到组织。主要在线上（抖音/B站/小红书）进行"围观"和单向信息获取。因不懂门道或害怕被嫌弃，不敢贸然加入。</p>
-          <div class="pc-section-label">核心需求</div>
-          <p class="pc-text">需要一个低心理负担、高信息密度的入口，能系统、友好地了解圈层文化，并通过一个不那么尴尬的"仪式"通道，平滑完成从"围观者"到"参与者"的身份转变。</p>
-          <div class="pc-quote-block">
-            <p>"我其实特别想加入动漫社，但怕自己画技太差被嫌弃，就一直在外面围观……不知道从哪里开始。"</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">§ 02</span>
+      <h2 class="section-title">我们为谁而设计</h2>
+    </div>
+    <p class="section-sub reveal" style="margin-bottom:48px;">调研揭示了两类截然不同却相互依存的目标用户。他们有不同的焦虑，不同的需求，却共享同一个渴望：找到真正属于自己的那个圈子。</p>
+    <div class="portrait-grid">
+      <div class="portrait-card reveal d1">
+        <div class="pc-header">
+          <div class="pc-avatar" style="background:#d4ead9;">🎯</div>
+          <div>
+            <div class="pc-type">User Type A</div>
+            <div class="pc-name">深度圈内人</div>
+            <div class="pc-tags">
+              <span class="pc-tag">硬核玩家</span>
+              <span class="pc-tag">文化守护者</span>
+              <span class="pc-tag">渴望深度</span>
+              <span class="pc-tag">有科普意愿</span>
+            </div>
+          </div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-section-label">基础特征</div>
+          <p class="pc-text">18—25岁在校大学生。某兴趣圈子的深度参与者，可能是社团骨干或活跃分子。线上线下双活跃，熟悉圈内"黑话"、文化和规则，会主动创作内容。</p>
+          <div class="pc-section-label">核心需求</div>
+          <p class="pc-text">需要一个能进行专业探讨、沉淀集体记忆、且环境纯粹不被"潜水者"干扰的深度交流空间。同时也有向外科普、吸纳优质新人的意愿。</p>
+          <div class="pc-quote-block">
+            <p>"在B站看到高质量的国风设计内容，想认真讨论却只能在评论区发几个字——那种无处安放的感觉让人很沮丧。"</p>
+          </div>
+        </div>
+      </div>
+      <div class="portrait-card reveal d2">
+        <div class="pc-header">
+          <div class="pc-avatar" style="background:#f5e4b8;">🌱</div>
+          <div>
+            <div class="pc-type">User Type B</div>
+            <div class="pc-name">预备役同好</div>
+            <div class="pc-tags">
+              <span class="pc-tag">兴趣萌芽</span>
+              <span class="pc-tag">文化好奇者</span>
+              <span class="pc-tag">有融入焦虑</span>
+              <span class="pc-tag">渴望入门</span>
+            </div>
+          </div>
+        </div>
+        <div class="pc-body">
+          <div class="pc-section-label">基础特征</div>
+          <p class="pc-text">对某兴趣领域有强烈好奇或初步喜爱，但尚未找到组织。主要在线上（抖音/B站/小红书）进行"围观"和单向信息获取。因不懂门道或害怕被嫌弃，不敢贸然加入。</p>
+          <div class="pc-section-label">核心需求</div>
+          <p class="pc-text">需要一个低心理负担、高信息密度的入口，能系统、友好地了解圈层文化，并通过一个不那么尴尬的"仪式"通道，平滑完成从"围观者"到"参与者"的身份转变。</p>
+          <div class="pc-quote-block">
+            <p>"我其实特别想加入动漫社，但怕自己画技太差被嫌弃，就一直在外面围观……不知道从哪里开始。"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- §3 PAIN POINTS -->
 <section class="pain-section section" id="pain">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num">§ 03</span>
-      <h2 class="section-title">现有工具的失败</h2>
-    </div>
-    <p class="section-sub reveal" style="color:rgba(245,242,235,.55);margin-bottom:48px;">不是年轻人不想加入圈子，是现有的数字工具从未真正理解"圈子"需要什么。每一个痛点，都指向一个尚未被解决的设计问题。</p>
-    <div class="pain-grid">
-      <div class="pain-card reveal d1">
-        <div class="pain-num">01</div>
-        <div class="pain-title">进群即沉默<br>QQ群的结构性失败</div>
-        <div class="pain-body">轻门槛的群聊涌入大量"沉默者"或无关人员，导致有效对话减少，深度内容被淹没。聊天记录易丢失，无法沉淀精华讨论和集体记忆。</div>
-        <div class="pain-arrow">→</div>
-      </div>
-      <div class="pain-card reveal d2">
-        <div class="pain-num">02</div>
-        <div class="pain-title">围观而非参与<br>内容平台的社群缺位</div>
-        <div class="pain-body">B站、小红书是内容平台，不是社群空间。深度交流需跳转，体验割裂。想找人交流却没地方——只能在评论区发几个字，随即被淹没在信息流里。</div>
-        <div class="pain-arrow">→</div>
-      </div>
-      <div class="pain-card reveal d3">
-        <div class="pain-num">03</div>
-        <div class="pain-title">认知壁垒无形抬高<br>新人的融入焦虑</div>
-        <div class="pain-body">圈内文化、术语、规则分散各处，新人不了解"黑话"和规范，害怕"说错话"被排斥，直接面对成熟的社交网络往往不知如何开启第一次对话。</div>
-        <div class="pain-arrow">→</div>
-      </div>
-      <div class="pain-card reveal d1">
-        <div class="pain-num">04</div>
-        <div class="pain-title">线下活动无法闭环<br>组织成本过高</div>
-        <div class="pain-body">想约人线下活动，没人响应。缺乏既能沉淀社群关系，又能高效发起、组织、记录线下活动的整合工具。圈子的温度停留在聚会现场，无法延续到数字空间。</div>
-        <div class="pain-arrow">→</div>
-      </div>
-      <div class="pain-vs reveal">
-        <div>
-          <div class="pain-vs-label">深度圈内人的困境</div>
-          <div class="pain-vs-text">圈子边界模糊，环境被稀释。平台功能割裂，无法承载深度文化沉淀。线上线下联动弱，活动组织成本高。</div>
-        </div>
-        <div class="pain-vs-divider">vs</div>
-        <div>
-          <div class="pain-vs-label">预备役同好的困境</div>
-          <div class="pain-vs-text">信息获取成本高，存在认知壁垒。缺乏友好、低门槛的融入入口。没有平滑的从"围观者"到"参与者"的路径。</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">§ 03</span>
+      <h2 class="section-title">现有工具的失败</h2>
+    </div>
+    <p class="section-sub reveal" style="color:rgba(245,242,235,.55);margin-bottom:48px;">不是年轻人不想加入圈子，是现有的数字工具从未真正理解"圈子"需要什么。每一个痛点，都指向一个尚未被解决的设计问题。</p>
+    <div class="pain-grid">
+      <div class="pain-card reveal d1">
+        <div class="pain-num">01</div>
+        <div class="pain-title">进群即沉默<br>QQ群的结构性失败</div>
+        <div class="pain-body">轻门槛的群聊涌入大量"沉默者"或无关人员，导致有效对话减少，深度内容被淹没。聊天记录易丢失，无法沉淀精华讨论和集体记忆。</div>
+        <div class="pain-arrow">→</div>
+      </div>
+      <div class="pain-card reveal d2">
+        <div class="pain-num">02</div>
+        <div class="pain-title">围观而非参与<br>内容平台的社群缺位</div>
+        <div class="pain-body">B站、小红书是内容平台，不是社群空间。深度交流需跳转，体验割裂。想找人交流却没地方——只能在评论区发几个字，随即被淹没在信息流里。</div>
+        <div class="pain-arrow">→</div>
+      </div>
+      <div class="pain-card reveal d3">
+        <div class="pain-num">03</div>
+        <div class="pain-title">认知壁垒无形抬高<br>新人的融入焦虑</div>
+        <div class="pain-body">圈内文化、术语、规则分散各处，新人不了解"黑话"和规范，害怕"说错话"被排斥，直接面对成熟的社交网络往往不知如何开启第一次对话。</div>
+        <div class="pain-arrow">→</div>
+      </div>
+      <div class="pain-card reveal d1">
+        <div class="pain-num">04</div>
+        <div class="pain-title">线下活动无法闭环<br>组织成本过高</div>
+        <div class="pain-body">想约人线下活动，没人响应。缺乏既能沉淀社群关系，又能高效发起、组织、记录线下活动的整合工具。圈子的温度停留在聚会现场，无法延续到数字空间。</div>
+        <div class="pain-arrow">→</div>
+      </div>
+      <div class="pain-vs reveal">
+        <div>
+          <div class="pain-vs-label">深度圈内人的困境</div>
+          <div class="pain-vs-text">圈子边界模糊，环境被稀释。平台功能割裂，无法承载深度文化沉淀。线上线下联动弱，活动组织成本高。</div>
+        </div>
+        <div class="pain-vs-divider">vs</div>
+        <div>
+          <div class="pain-vs-label">预备役同好的困境</div>
+          <div class="pain-vs-text">信息获取成本高，存在认知壁垒。缺乏友好、低门槛的融入入口。没有平滑的从"围观者"到"参与者"的路径。</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- §4 RESEARCH PROCESS -->
 <section class="research-section section" id="research">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num">§ 04</span>
-      <h2 class="section-title">我们如何调研</h2>
-    </div>
-    <p class="section-sub reveal" style="margin-bottom:56px;">调研遵循"线下调研—对比分析—线上创新"的完整路径。沉浸式参与观察、半结构化深度访谈、体验反馈收集三者结合，确保设计真正扎根于社群土壤。</p>
-    <div class="research-timeline">
-      <div class="rt-item reveal">
-        <div class="rt-meta">
-          <div class="rt-phase">Phase 01</div>
-          <div class="rt-date">前期<br>观察</div>
-          <div class="rt-team">调研：李雨彤、杨诗真<br>统筹：刘依琳</div>
-        </div>
-        <div class="rt-content">
-          <h3>沉浸式调研</h3>
-          <p>深入街舞社练习室、动漫社活动角落、书法国风社三个现场进行沉浸式参与观察。记录社员之间使用"专属符号"或"黑话"沟通的细节；拍摄社员在特定空间中专注且放松的"精神角落"状态；捕捉线上线下重合的关键时刻。</p>
-          <span class="rt-tag">田野观察</span>
-          <span class="rt-tag">影像记录</span>
-          <span class="rt-tag">场景还原</span>
-          <div class="rt-finding">
-            关键发现：圈子的入场门槛并非刻意设计，而是文化自然沉淀的结果。"黑话"不是排外手段，而是身份确认机制——它在筛选真正的同好方面，比任何表单有效。
-          </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">§ 04</span>
+      <h2 class="section-title">我们如何调研</h2>
+    </div>
+    <p class="section-sub reveal" style="margin-bottom:56px;">调研遵循"线下调研—对比分析—线上创新"的完整路径。沉浸式参与观察、半结构化深度访谈、体验反馈收集三者结合，确保设计真正扎根于社群土壤。</p>
+    <div class="research-timeline">
+      <div class="rt-item reveal">
+        <div class="rt-meta">
+          <div class="rt-phase">Phase 01</div>
+          <div class="rt-date">前期<br>观察</div>
+          <div class="rt-team">调研：李雨彤、杨诗真<br>统筹：刘依琳</div>
+        </div>
+        <div class="rt-content">
+          <h3>沉浸式调研</h3>
+          <p>深入街舞社练习室、动漫社活动角落、书法国风社三个现场进行沉浸式参与观察。记录社员之间使用"专属符号"或"黑话"沟通的细节；拍摄社员在特定空间中专注且放松的"精神角落"状态；捕捉线上线下重合的关键时刻。</p>
+          <span class="rt-tag">田野观察</span>
+          <span class="rt-tag">影像记录</span>
+          <span class="rt-tag">场景还原</span>
+          <div class="rt-finding">
+            关键发现：圈子的入场门槛并非刻意设计，而是文化自然沉淀的结果。"黑话"不是排外手段，而是身份确认机制——它在筛选真正的同好方面，比任何表单都有效。
+          </div>
 
-                    <div class="carousel-wrap" id="researchCarousel">
-            <div class="carousel-track" id="carouselTrack">
+          <!-- ════════════════════════════════════════════════════
+               📸 前期观察 · 实景轮播图 — 图片替换说明
+               共 5 张，将下方各 <img> 的 src 属性替换为您的图片链接即可。
+               建议图片尺寸：宽 900px 以上，横版（16:9 或 4:3）。
+               ════════════════════════════════════════════════════ -->
+          <div class="carousel-wrap" id="researchCarousel">
+            <div class="carousel-track" id="carouselTrack">
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=900&auto=format&fit=crop&q=70"
-                     alt="街舞社调研现场"
-                     data-replace="【替换此处】街舞社 · 排练室调研实景">
-                <div class="carousel-caption">街舞社 · 排练室沉浸式观察</div>
-              </div>
+              <!-- 【第1张】替换 src 为：街舞社排练室现场照片 -->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=900&auto=format&fit=crop&q=70"
+                     alt="街舞社调研现场"
+                     data-replace="【替换此处】街舞社 · 排练室调研实景">
+                <div class="carousel-caption">街舞社 · 排练室沉浸式观察</div>
+              </div>
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=900&auto=format&fit=crop&q=70"
-                     alt="动漫社调研现场"
-                     data-replace="【替换此处】动漫社 · 活动角落调研实景">
-                <div class="carousel-caption">动漫社 · 活动角落精神空间记录</div>
-              </div>
+              <!-- 【第2张】替换 src 为：动漫社活动角落现场照片 -->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=900&auto=format&fit=crop&q=70"
+                     alt="动漫社调研现场"
+                     data-replace="【替换此处】动漫社 · 活动角落调研实景">
+                <div class="carousel-caption">动漫社 · 活动角落精神空间记录</div>
+              </div>
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1702054853074-260ebd0aa9ea?w=900&auto=format&fit=crop&q=70"
-                     alt="书法国风社调研现场"
-                     data-replace="【替换此处】书法国风社 · 笔墨现场调研实景">
-                <div class="carousel-caption">书法国风社 · 笔墨天地现场采集</div>
-              </div>
+              <!-- 【第3张】替换 src 为：书法国风社现场照片 -->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1702054853074-260ebd0aa9ea?w=900&auto=format&fit=crop&q=70"
+                     alt="书法国风社调研现场"
+                     data-replace="【替换此处】书法国风社 · 笔墨现场调研实景">
+                <div class="carousel-caption">书法国风社 · 笔墨天地现场采集</div>
+              </div>
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=900&auto=format&fit=crop&q=70"
-                     alt="社员互动细节"
-                     data-replace="【替换此处】社员专属符号/黑话沟通细节记录">
-                <div class="carousel-caption">社员互动 · 捕捉圈子专属符号与默契</div>
-              </div>
+              <!-- 【第4张】替换 src 为：社群成员互动/黑话交流细节照片 -->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=900&auto=format&fit=crop&q=70"
+                     alt="社员互动细节"
+                     data-replace="【替换此处】社员专属符号/黑话沟通细节记录">
+                <div class="carousel-caption">社员互动 · 捕捉圈子专属符号与默契</div>
+              </div>
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&auto=format&fit=crop&q=70"
-                     alt="线下活动观察"
-                     data-replace="【替换此处】线下活动 · 圈子文化在聚会中生长">
-                <div class="carousel-caption">线下活动 · 观察圈子文化如何在聚会中生长</div>
-              </div>
+              <!-- 【第5张】替换 src 为：线下活动/集体聚会场景照片 -->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&auto=format&fit=crop&q=70"
+                     alt="线下活动观察"
+                     data-replace="【替换此处】线下活动 · 圈子文化在聚会中生长">
+                <div class="carousel-caption">线下活动 · 观察圈子文化如何在聚会中生长</div>
+              </div>
 
-            </div>
-            <div class="carousel-controls">
-              <div class="carousel-dots" id="carouselDots">
-                <div class="carousel-dot active" onclick="goSlide(0)"></div>
-                <div class="carousel-dot" onclick="goSlide(1)"></div>
-                <div class="carousel-dot" onclick="goSlide(2)"></div>
-                <div class="carousel-dot" onclick="goSlide(3)"></div>
-                <div class="carousel-dot" onclick="goSlide(4)"></div>
-              </div>
-              <div class="carousel-btns">
-                <button class="carousel-btn" onclick="prevSlide()">←</button>
-                <button class="carousel-btn" onclick="nextSlide()">→</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="rt-item reveal">
-        <div class="rt-meta">
-          <div class="rt-phase">Phase 02</div>
-          <div class="rt-date">深度<br>访谈</div>
-          <div class="rt-team">采访：刘依琳、张梦淋<br>文案：陈婷婷</div>
-        </div>
-        <div class="rt-content">
-          <h3>半结构化深度访谈（9题访谈提纲）</h3>
-          <p>围绕"什么样的群体算一个圈子"、"何时感觉真正属于这个圈子"、"圈子内的专属表达与融入门槛"等核心问题，对街舞社、动漫社、书法国风社成员进行一对一深度访谈。访谈全程录像，后期整理为调研报告。</p>
-          <span class="rt-tag">半结构访谈</span>
-          <span class="rt-tag">录像记录</span>
-          <span class="rt-tag">质性分析</span>
-          <div class="rt-finding">
-            关键发现：超过 80% 的受访者表示，他们有过"想加入某个圈子但不敢开口"的经历。融入焦虑是真实且普遍存在的心理障碍，而非个人问题。
-          </div>
+            </div>
+            <div class="carousel-controls">
+              <div class="carousel-dots" id="carouselDots">
+                <div class="carousel-dot active" onclick="goSlide(0)"></div>
+                <div class="carousel-dot" onclick="goSlide(1)"></div>
+                <div class="carousel-dot" onclick="goSlide(2)"></div>
+                <div class="carousel-dot" onclick="goSlide(3)"></div>
+                <div class="carousel-dot" onclick="goSlide(4)"></div>
+              </div>
+              <div class="carousel-btns">
+                <button class="carousel-btn" onclick="prevSlide()">←</button>
+                <button class="carousel-btn" onclick="nextSlide()">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rt-item reveal">
+        <div class="rt-meta">
+          <div class="rt-phase">Phase 02</div>
+          <div class="rt-date">深度<br>访谈</div>
+          <div class="rt-team">采访：刘依琳、张梦淋<br>文案：陈婷婷</div>
+        </div>
+        <div class="rt-content">
+          <h3>半结构化深度访谈（9题访谈提纲）</h3>
+          <p>围绕"什么样的群体算一个圈子"、"何时感觉真正属于这个圈子"、"圈子内的专属表达与融入门槛"等核心问题，对街舞社、动漫社、书法国风社成员进行一对一深度访谈。访谈全程录像，后期整理为调研报告。</p>
+          <span class="rt-tag">半结构访谈</span>
+          <span class="rt-tag">录像记录</span>
+          <span class="rt-tag">质性分析</span>
+          <div class="rt-finding">
+            关键发现：超过 80% 的受访者表示，他们有过"想加入某个圈子但不敢开口"的经历。融入焦虑是真实且普遍存在的心理障碍，而非个人问题。
+          </div>
 
-                    <div class="carousel-wrap" id="interviewCarousel">
-            <div class="carousel-track" id="interviewTrack">
+          <!-- ════════════════════════════════════════════════════
+               📸 深度访谈 · 过程性图片轮播 — 图片替换说明
+               共 4 张，将下方各 <img> 的 src 属性替换为您的访谈照片链接即可。
+               建议图片尺寸：宽 900px 以上，横版（16:9 或 4:3）。
+               ════════════════════════════════════════════════════ -->
+          <div class="carousel-wrap" id="interviewCarousel">
+            <div class="carousel-track" id="interviewTrack">
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=900&auto=format&fit=crop&q=70"
-                     alt="访谈现场布置"
-                     data-replace="【替换此处】访谈现场全景 · 教室/访谈间环境">
-                <div class="carousel-caption">访谈现场 · 空间布置与氛围营造</div>
-              </div>
+              <!-- 【第1张】替换 src 为：访谈现场全景照（如教室/访谈间布置）-->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=900&auto=format&fit=crop&q=70"
+                     alt="访谈现场布置"
+                     data-replace="【替换此处】访谈现场全景 · 教室/访谈间环境">
+                <div class="carousel-caption">访谈现场 · 空间布置与氛围营造</div>
+              </div>
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&auto=format&fit=crop&q=70"
-                     alt="访谈进行中"
-                     data-replace="【替换此处】访谈进行中 · 采访者与受访者对谈画面">
-                <div class="carousel-caption">访谈进行中 · 一对一深度对话记录</div>
-              </div>
+              <!-- 【第2张】替换 src 为：访谈进行中照片（采访者与受访者对谈）-->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&auto=format&fit=crop&q=70"
+                     alt="访谈进行中"
+                     data-replace="【替换此处】访谈进行中 · 采访者与受访者对谈画面">
+                <div class="carousel-caption">访谈进行中 · 一对一深度对话记录</div>
+              </div>
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1616564826355-b0021c684dc8?w=900&auto=format&fit=crop&q=70"
-                     alt="访谈设备记录"
-                     data-replace="【替换此处】录像/录音设备 · 访谈素材拍摄过程">
-                <div class="carousel-caption">素材记录 · 全程录像留存访谈原始影像</div>
-              </div>
+              <!-- 【第3张】替换 src 为：摄像/录音设备记录照（拍摄、设备细节）-->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1616564826355-b0021c684dc8?w=900&auto=format&fit=crop&q=70"
+                     alt="访谈设备记录"
+                     data-replace="【替换此处】录像/录音设备 · 访谈素材拍摄过程">
+                <div class="carousel-caption">素材记录 · 全程录像留存访谈原始影像</div>
+              </div>
 
-                            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=900&auto=format&fit=crop&q=70"
-                     alt="访谈团队工作照"
-                     data-replace="【替换此处】访谈团队工作照 · 访谈结束后合影或幕后">
-                <div class="carousel-caption">幕后 · 访谈团队协作与现场记录</div>
-              </div>
+              <!-- 【第4张】替换 src 为：访谈结束后合影或团队工作照-->
+              <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=900&auto=format&fit=crop&q=70"
+                     alt="访谈团队工作照"
+                     data-replace="【替换此处】访谈团队工作照 · 访谈结束后合影或幕后">
+                <div class="carousel-caption">幕后 · 访谈团队协作与现场记录</div>
+              </div>
 
-            </div>
-            <div class="carousel-controls">
-              <div class="carousel-dots" id="interviewDots">
-                <div class="carousel-dot active" onclick="goInterview(0)"></div>
-                <div class="carousel-dot" onclick="goInterview(1)"></div>
-                <div class="carousel-dot" onclick="goInterview(2)"></div>
-                <div class="carousel-dot" onclick="goInterview(3)"></div>
-              </div>
-              <div class="carousel-btns">
-                <button class="carousel-btn" onclick="prevInterview()">←</button>
-                <button class="carousel-btn" onclick="nextInterview()">→</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="rt-item reveal">
-        <div class="rt-meta">
-          <div class="rt-phase">Phase 03</div>
-          <div class="rt-date">用户<br>测试</div>
-          <div class="rt-team">设计：张心如<br>调研：杨诗真</div>
-        </div>
-        <div class="rt-content">
-          <h3>体验反馈表收集与分析</h3>
-          <p>面向8位真实用户收集五维度体验反馈：产品文化观点理解度、印象最深功能点、困惑或出戏的环节、作品完整性评估、一句话建议。反馈显示用户对社群文化展示、互动机制有强烈正向认可，同时揭示了界面信息层级、视觉比例等需改进的问题。</p>
-          <span class="rt-tag">问卷设计</span>
-          <span class="rt-tag">8人测试组</span>
-          <span class="rt-tag">迭代输入</span>
-          <div class="rt-finding">
-            关键发现：用户最认可的是"加入圈子时做的小题目"（兴趣验证机制）和"每个社团内部做了什么能清楚看到"（文化透明度）。这两点成为后续产品的核心竞争力。
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            </div>
+            <div class="carousel-controls">
+              <div class="carousel-dots" id="interviewDots">
+                <div class="carousel-dot active" onclick="goInterview(0)"></div>
+                <div class="carousel-dot" onclick="goInterview(1)"></div>
+                <div class="carousel-dot" onclick="goInterview(2)"></div>
+                <div class="carousel-dot" onclick="goInterview(3)"></div>
+              </div>
+              <div class="carousel-btns">
+                <button class="carousel-btn" onclick="prevInterview()">←</button>
+                <button class="carousel-btn" onclick="nextInterview()">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rt-item reveal">
+        <div class="rt-meta">
+          <div class="rt-phase">Phase 03</div>
+          <div class="rt-date">用户<br>测试</div>
+          <div class="rt-team">设计：张心如<br>调研：杨诗真</div>
+        </div>
+        <div class="rt-content">
+          <h3>体验反馈表收集与分析</h3>
+          <p>面向8位真实用户收集五维度体验反馈：产品文化观点理解度、印象最深功能点、困惑或出戏的环节、作品完整性评估、一句话建议。反馈显示用户对社群文化展示、互动机制有强烈正向认可，同时揭示了界面信息层级、视觉比例等需改进的问题。</p>
+          <span class="rt-tag">问卷设计</span>
+          <span class="rt-tag">8人测试组</span>
+          <span class="rt-tag">迭代输入</span>
+          <div class="rt-finding">
+            关键发现：用户最认可的是"加入圈子时做的小题目"（兴趣验证机制）和"每个社团内部做了什么能清楚看到"（文化透明度）。这两点成为后续产品的核心竞争力。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- §5 ITERATION -->
 <section class="iter-section section" id="iteration">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num">§ 05</span>
-      <h2 class="section-title">三轮迭代，一次次逼近真实</h2>
-    </div>
-    <p class="section-sub reveal" style="margin-bottom:48px;">产品不是凭空想象出来的，而是在反复的"设计—测试—修改"中生长出来的。每一轮迭代都由真实的用户反馈驱动，每一次修改都对应一个具体的设计问题。</p>
-    <div class="iter-grid">
-      <div class="iter-card reveal d1">
-        <div class="iter-card-header">
-          <div class="iter-ver">v1.0</div>
-          <div class="iter-status done">已归档</div>
-        </div>
-        <div class="iter-body">
-          <div class="iter-title">第一版 · 功能验证原型</div>
-          <ul class="iter-changes">
-            <li>完成基础圈子广场、圈子详情、帖子发布的核心流程</li>
-            <li>实现兴趣验证入圈机制（首次提出"轻门槛验证"概念）</li>
-            <li>搭建消息中心与个人主页框架</li>
-            <li>暴露问题：信息层级混乱、头像占比过大、活动功能被弱化</li>
-          </ul>
-          <a class="iter-link" href="https://herold0522-create.github.io/my-awesome-project/" target="_blank">查看第一版 ↗</a>
-        </div>
-      </div>
-      <div class="iter-card reveal d2">
-        <div class="iter-card-header">
-          <div class="iter-ver">v2.0</div>
-          <div class="iter-status done">已归档</div>
-        </div>
-        <div class="iter-body">
-          <div class="iter-title">第二版 · 体验优化版</div>
-          <ul class="iter-changes">
-            <li>重构页面信息层级，主次信息前后分明</li>
-            <li>头像比例调整至小红书标准，不再与内容抢占位</li>
-            <li>活动模块提前至核心位置，突出时效性</li>
-            <li>圈子分类细化：线上沟通类 / 线下活动类</li>
-            <li>增加圈子进退门槛与冷静期机制</li>
-          </ul>
-          <a class="iter-link" href="https://darling-rugelach-8e04a8.netlify.app/" target="_blank">查看第二版 ↗</a>
-        </div>
-      </div>
-      <div class="iter-card reveal d3">
-        <div class="iter-card-header">
-          <div class="iter-ver">v3.0</div>
-          <div class="iter-status current">当前版本</div>
-        </div>
-        <div class="iter-body">
-          <div class="iter-title">第三版 · 双端分化设计</div>
-          <ul class="iter-changes">
-            <li>正式分化移动端与网页端，各自发挥终端优势</li>
-            <li>移动端专注即时社交与轻量互动</li>
-            <li>网页端主打沉浸阅读与深度文化展示</li>
-            <li>视觉系统全面升级：杂志级排版、Drop Cap 排版</li>
-            <li>引入 AI 助手「云中君」，实时响应社群需求</li>
-          </ul>
-          <a class="iter-link" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">查看第三版 ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">§ 05</span>
+      <h2 class="section-title">三轮迭代，一次次逼近真实</h2>
+    </div>
+    <p class="section-sub reveal" style="margin-bottom:48px;">产品不是凭空想象出来的，而是在反复的"设计—测试—修改"中生长出来的。每一轮迭代都由真实的用户反馈驱动，每一次修改都对应一个具体的设计问题。</p>
+    <div class="iter-grid">
+      <div class="iter-card reveal d1">
+        <div class="iter-card-header">
+          <div class="iter-ver">v1.0</div>
+          <div class="iter-status done">已归档</div>
+        </div>
+        <div class="iter-body">
+          <div class="iter-title">第一版 · 功能验证原型</div>
+          <ul class="iter-changes">
+            <li>完成基础圈子广场、圈子详情、帖子发布的核心流程</li>
+            <li>实现兴趣验证入圈机制（首次提出"轻门槛验证"概念）</li>
+            <li>搭建消息中心与个人主页框架</li>
+            <li>暴露问题：信息层级混乱、头像占比过大、活动功能被弱化</li>
+          </ul>
+          <a class="iter-link" href="https://herold0522-create.github.io/my-awesome-project/" target="_blank">查看第一版 ↗</a>
+        </div>
+      </div>
+      <div class="iter-card reveal d2">
+        <div class="iter-card-header">
+          <div class="iter-ver">v2.0</div>
+          <div class="iter-status done">已归档</div>
+        </div>
+        <div class="iter-body">
+          <div class="iter-title">第二版 · 体验优化版</div>
+          <ul class="iter-changes">
+            <li>重构页面信息层级，主次信息前后分明</li>
+            <li>头像比例调整至小红书标准，不再与内容抢占位</li>
+            <li>活动模块提前至核心位置，突出时效性</li>
+            <li>圈子分类细化：线上沟通类 / 线下活动类</li>
+            <li>增加圈子进退门槛与冷静期机制</li>
+          </ul>
+          <a class="iter-link" href="https://darling-rugelach-8e04a8.netlify.app/" target="_blank">查看第二版 ↗</a>
+        </div>
+      </div>
+      <div class="iter-card reveal d3">
+        <div class="iter-card-header">
+          <div class="iter-ver">v3.0</div>
+          <div class="iter-status current">当前版本</div>
+        </div>
+        <div class="iter-body">
+          <div class="iter-title">第三版 · 双端分化设计</div>
+          <ul class="iter-changes">
+            <li>正式分化移动端与网页端，各自发挥终端优势</li>
+            <li>移动端专注即时社交与轻量互动</li>
+            <li>网页端主打沉浸阅读与深度文化展示</li>
+            <li>视觉系统全面升级：杂志级排版、Drop Cap 排版</li>
+            <li>引入 AI 助手「云中君」，实时响应社群需求</li>
+          </ul>
+          <a class="iter-link" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">查看第三版 ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- STATS STRIP -->
 <div class="stats-strip">
-  <div class="stats-inner">
-    <div class="stat-block reveal">
-      <div class="stat-num">3</div>
-      <div class="stat-label">社群调研对象</div>
-    </div>
-    <div class="stat-block reveal d1">
-      <div class="stat-num">9</div>
-      <div class="stat-label">访谈核心问题</div>
-    </div>
-    <div class="stat-block reveal d2">
-      <div class="stat-num">8</div>
-      <div class="stat-label">用户反馈样本</div>
-    </div>
-    <div class="stat-block reveal d3">
-      <div class="stat-num">3×</div>
-      <div class="stat-label">产品迭代轮次</div>
-    </div>
-    <div class="stat-block reveal d4">
-      <div class="stat-num">2</div>
-      <div class="stat-label">终端差异化设计</div>
-    </div>
-  </div>
+  <div class="stats-inner">
+    <div class="stat-block reveal">
+      <div class="stat-num">3</div>
+      <div class="stat-label">社群调研对象</div>
+    </div>
+    <div class="stat-block reveal d1">
+      <div class="stat-num">9</div>
+      <div class="stat-label">访谈核心问题</div>
+    </div>
+    <div class="stat-block reveal d2">
+      <div class="stat-num">8</div>
+      <div class="stat-label">用户反馈样本</div>
+    </div>
+    <div class="stat-block reveal d3">
+      <div class="stat-num">3×</div>
+      <div class="stat-label">产品迭代轮次</div>
+    </div>
+    <div class="stat-block reveal d4">
+      <div class="stat-num">2</div>
+      <div class="stat-label">终端差异化设计</div>
+    </div>
+  </div>
 </div>
 
+<!-- §6 DUAL PLATFORM -->
 <section class="dual-section section" id="platform">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num">§ 06</span>
-      <h2 class="section-title">为什么是两个端</h2>
-    </div>
-    <p class="section-sub reveal" style="color:rgba(245,242,235,.55);margin-bottom:48px;">
-      移动端与网页端并非重复建设，而是对两种截然不同的"圈子使用场景"的精准回应。这个决定来自调研中一个关键发现：用户在手机上和在电脑前，对社群的期待完全不同。
-    </p>
-    <div class="dual-grid">
-      <div class="dual-card reveal d1">
-        <div class="dual-card-num">M</div>
-        <div class="dual-card-icon">📱</div>
-        <div class="dual-card-label">Mobile · 移动端</div>
-        <h3 class="dual-card-title">即时连接<br>碎片化的社群温度</h3>
-        <p class="dual-card-body">调研发现，社群成员之间的日常互动——@一个好友、发一条"今晚练舞"的消息、分享一张刚拍的照片——都发生在手机上，发生在碎片化的时间里。移动端的核心价值不是"内容深度"，而是"连接的即时性"。</p>
-        <ul class="dual-card-features">
-          <li>随时随地签到参与，低摩擦快速互动</li>
-          <li>5 大板块底部导航，拇指友好的操作逻辑</li>
-          <li>私聊 + 社群 + 通知三合一消息中心</li>
-          <li>活动一键报名，轻量参与降低门槛</li>
-          <li>适配用户碎片时间，30 秒内完成核心操作</li>
-        </ul>
-      </div>
-      <div class="dual-card reveal d2">
-        <div class="dual-card-num">W</div>
-        <div class="dual-card-icon">🖥️</div>
-        <div class="dual-card-label">Web · 网页端</div>
-        <h3 class="dual-card-title">深度沉浸<br>文化叙事的完整舞台</h3>
-        <p class="dual-card-body">用户在准备"认真了解一个圈子"时，往往会打开电脑，坐下来，花上十几分钟仔细阅读。网页端的宽屏优势让杂志级排版、多栏不对称信息流、沉浸式 Hero 展台成为可能——这些体验在手机上根本无法实现。</p>
-        <ul class="dual-card-features">
-          <li>1920×1080 宽屏优先，充分利用视觉空间</li>
-          <li>杂志级排版：Serif 衬线混排、Drop Cap 首字下沉</li>
-          <li>圈层大厅双列网格，一眼纵览所有圈子</li>
-          <li>活动详情沉浸式展示，专属高对比报名侧栏</li>
-          <li>AI 助手「云中君」深度接入，社区温度有保障</li>
-        </ul>
-      </div>
-      <div class="dual-divider reveal">
-        "圈子文化的完整表达，需要两种截然不同的数字形态——一种用于日常的情感维系，一种用于深度的文化沉淀。我们没有让它们竞争，而是让它们互补。"
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">§ 06</span>
+      <h2 class="section-title">为什么是两个端</h2>
+    </div>
+    <p class="section-sub reveal" style="color:rgba(245,242,235,.55);margin-bottom:48px;">
+      移动端与网页端并非重复建设，而是对两种截然不同的"圈子使用场景"的精准回应。这个决定来自调研中一个关键发现：用户在手机上和在电脑前，对社群的期待完全不同。
+    </p>
+    <div class="dual-grid">
+      <div class="dual-card reveal d1">
+        <div class="dual-card-num">M</div>
+        <div class="dual-card-icon">📱</div>
+        <div class="dual-card-label">Mobile · 移动端</div>
+        <h3 class="dual-card-title">即时连接<br>碎片化的社群温度</h3>
+        <p class="dual-card-body">调研发现，社群成员之间的日常互动——@一个好友、发一条"今晚练舞"的消息、分享一张刚拍的照片——都发生在手机上，发生在碎片化的时间里。移动端的核心价值不是"内容深度"，而是"连接的即时性"。</p>
+        <ul class="dual-card-features">
+          <li>随时随地签到参与，低摩擦快速互动</li>
+          <li>5 大板块底部导航，拇指友好的操作逻辑</li>
+          <li>私聊 + 社群 + 通知三合一消息中心</li>
+          <li>活动一键报名，轻量参与降低门槛</li>
+          <li>适配用户碎片时间，30 秒内完成核心操作</li>
+        </ul>
+      </div>
+      <div class="dual-card reveal d2">
+        <div class="dual-card-num">W</div>
+        <div class="dual-card-icon">🖥️</div>
+        <div class="dual-card-label">Web · 网页端</div>
+        <h3 class="dual-card-title">深度沉浸<br>文化叙事的完整舞台</h3>
+        <p class="dual-card-body">用户在准备"认真了解一个圈子"时，往往会打开电脑，坐下来，花上十几分钟仔细阅读。网页端的宽屏优势让杂志级排版、多栏不对称信息流、沉浸式 Hero 展台成为可能——这些体验在手机上根本无法实现。</p>
+        <ul class="dual-card-features">
+          <li>1920×1080 宽屏优先，充分利用视觉空间</li>
+          <li>杂志级排版：Serif 衬线混排、Drop Cap 首字下沉</li>
+          <li>圈层大厅双列网格，一眼纵览所有圈子</li>
+          <li>活动详情沉浸式展示，专属高对比报名侧栏</li>
+          <li>AI 助手「云中君」深度接入，社区温度有保障</li>
+        </ul>
+      </div>
+      <div class="dual-divider reveal">
+        "圈子文化的完整表达，需要两种截然不同的数字形态——一种用于日常的情感维系，一种用于深度的文化沉淀。我们没有让它们竞争，而是让它们互补。"
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- §7 CTA / LINKS -->
 <section class="cta-section section" id="product">
-  <div class="cta-inner">
-    <div class="reveal">
-      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-light);margin-bottom:24px;">最终产品</p>
-      <h2 class="cta-lead">
-        找到你的<br>
-        <span class="line2">精神角落</span>
-      </h2>
-    </div>
-    <div class="cta-cards" style="grid-template-columns:1fr 1fr 1fr;">
-      <a class="cta-card accent-amber reveal d1" href="https://github.com/herold0522-create/Digital-Culture-Project-Info-mobile" target="_blank">
-        <div class="cta-card-bg">M</div>
-        <div class="cta-card-tag">Mobile Experience</div>
-        <div class="cta-card-title">移动端介绍<br>数字文化 · 随时在线</div>
-        <p class="cta-card-desc">从首页到圈子广场、热门活动、消息中心到个人主页，五大板块的移动端交互体验全展示。手机模拟框逐板块演示，真实还原用户在手机上的使用感受。</p>
-        <div class="cta-card-platform">
-          <span>查看移动端介绍</span>
-          <span>📱</span>
-        </div>
-      </a>
-      <a class="cta-card accent-green reveal d2" href="https://github.com/herold0522-create/Digital-Culture-Project-Info" target="_blank">
-        <div class="cta-card-bg">W</div>
-        <div class="cta-card-tag">Web Experience</div>
-        <div class="cta-card-title">网页端介绍<br>数字文化 · 深度沉浸</div>
-        <p class="cta-card-desc">以 iPad 外框逐一呈现登录页、首页、发现与活动、圈层大厅、杂志排版、活动详情六大页面的设计精髓。展示宽屏优先的视觉叙事逻辑与沉浸美学。</p>
-        <div class="cta-card-platform">
-          <span>查看网页端介绍</span>
-          <span>🖥️</span>
-        </div>
-      </a>
-      <a class="cta-card reveal d3" style="border-top:4px solid #6d28d9; background:var(--ink);" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">
-        <div class="cta-card-bg" style="color:rgba(245,242,235,.04);">P</div>
-        <div class="cta-card-tag" style="color:rgba(245,242,235,.4);">Final Product · v3.0</div>
-        <div class="cta-card-title" style="color:var(--paper);">最终产品<br>数字文化 · 正式上线</div>
-        <p class="cta-card-desc" style="color:rgba(245,242,235,.5);">经历三轮迭代、8人用户测试、双端差异化设计后的最终版本。包含完整的圈子广场、兴趣验证机制、AI助手、社群聊天室等核心功能。</p>
-        <div class="cta-card-platform" style="border-color:rgba(245,242,235,.2);color:var(--paper);">
-          <span>进入完整产品</span>
-          <span>🚀</span>
-        </div>
-      </a>
-    </div>
-    <div class="footnote reveal">
-      <p>福州大学至诚学院 · 数字文化课题组 · 2025 Spring</p>
-      <p>调研报告 · 创作方案书 · 三轮迭代产品</p>
-    </div>
-  </div>
+  <div class="cta-inner">
+    <div class="reveal">
+      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-light);margin-bottom:24px;">最终产品</p>
+      <h2 class="cta-lead">
+        找到你的<br>
+        <span class="line2">精神角落</span>
+      </h2>
+    </div>
+    <div class="cta-cards" style="grid-template-columns:1fr 1fr 1fr;">
+      <a class="cta-card accent-amber reveal d1" href="https://github.com/herold0522-create/Digital-Culture-Project-Info-mobile" target="_blank">
+        <div class="cta-card-bg">M</div>
+        <div class="cta-card-tag">Mobile Experience</div>
+        <div class="cta-card-title">移动端介绍<br>数字文化 · 随时在线</div>
+        <p class="cta-card-desc">从首页到圈子广场、热门活动、消息中心到个人主页，五大板块的移动端交互体验全展示。手机模拟框逐板块演示，真实还原用户在手机上的使用感受。</p>
+        <div class="cta-card-platform">
+          <span>查看移动端介绍</span>
+          <span>📱</span>
+        </div>
+      </a>
+      <a class="cta-card accent-green reveal d2" href="https://github.com/herold0522-create/Digital-Culture-Project-Info" target="_blank">
+        <div class="cta-card-bg">W</div>
+        <div class="cta-card-tag">Web Experience</div>
+        <div class="cta-card-title">网页端介绍<br>数字文化 · 深度沉浸</div>
+        <p class="cta-card-desc">以 iPad 外框逐一呈现登录页、首页、发现与活动、圈层大厅、杂志排版、活动详情六大页面的设计精髓。展示宽屏优先的视觉叙事逻辑与沉浸美学。</p>
+        <div class="cta-card-platform">
+          <span>查看网页端介绍</span>
+          <span>🖥️</span>
+        </div>
+      </a>
+      <a class="cta-card reveal d3" style="border-top:4px solid #6d28d9; background:var(--ink);" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">
+        <div class="cta-card-bg" style="color:rgba(245,242,235,.04);">P</div>
+        <div class="cta-card-tag" style="color:rgba(245,242,235,.4);">Final Product · v3.0</div>
+        <div class="cta-card-title" style="color:var(--paper);">最终产品<br>数字文化 · 正式上线</div>
+        <p class="cta-card-desc" style="color:rgba(245,242,235,.5);">经历三轮迭代、8人用户测试、双端差异化设计后的最终版本。包含完整的圈子广场、兴趣验证机制、AI助手、社群聊天室等核心功能。</p>
+        <div class="cta-card-platform" style="border-color:rgba(245,242,235,.2);color:var(--paper);">
+          <span>进入完整产品</span>
+          <span>🚀</span>
+        </div>
+      </a>
+    </div>
+    <div class="footnote reveal">
+      <p>福州大学至诚学院 · 数字文化课题组 · 2025 Spring</p>
+      <p>调研报告 · 创作方案书 · 三轮迭代产品</p>
+    </div>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">数字文化<em>.</em> 这个圈子</div>
-  <div class="footer-copy">© 2025 福州大学至诚学院 · 刘依琳 张梦淋 李雨彤 杨诗真 张心如 林晓雨 陈婷婷 韦馨</div>
+  <div class="footer-logo">数字文化<em>.</em> 这个圈子</div>
+  <div class="footer-copy">© 2025 福州大学至诚学院 · 刘依琳 张梦淋 李雨彤 杨诗真 张心如 林晓雨 陈婷婷 韦馨</div>
 </footer>
 
 <script>
 // Reveal on scroll
 const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('vis'); });
+  entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('vis'); });
 }, { threshold:.1, rootMargin:'0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 // Stagger grid children
 document.querySelectorAll('.insight-grid, .iter-grid, .pain-grid, .portrait-grid, .dual-grid, .stats-inner').forEach(grid => {
-  [...grid.children].forEach((child, i) => {
-    if (!child.classList.contains('d1') && !child.classList.contains('d2') && !child.classList.contains('d3')) {
-      child.style.transitionDelay = (i * 70) + 'ms';
-    }
-  });
+  [...grid.children].forEach((child, i) => {
+    if (!child.classList.contains('d1') && !child.classList.contains('d2') && !child.classList.contains('d3')) {
+      child.style.transitionDelay = (i * 70) + 'ms';
+    }
+  });
 });
 
 // Nav scroll style
 const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 80) {
-    nav.style.boxShadow = '0 2px 20px rgba(15,14,11,.4)';
-  } else {
-    nav.style.boxShadow = 'none';
-  }
+  if (window.scrollY > 80) {
+    nav.style.boxShadow = '0 2px 20px rgba(15,14,11,.4)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
 });
 
 // Smooth active nav link
 const sections = document.querySelectorAll('section[id], .masthead');
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 80) current = s.id || '';
-  });
-  navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#'+current ? 'var(--amber)' : 'rgba(245,242,235,.5)';
-  });
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 80) current = s.id || '';
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#'+current ? 'var(--amber)' : 'rgba(245,242,235,.5)';
+  });
 });
 
 // ── 前期观察轮播（researchCarousel）──
@@ -1186,9 +1211,9 @@ const track = document.getElementById('carouselTrack');
 const dots = document.querySelectorAll('#researchCarousel .carousel-dot');
 
 function goSlide(idx) {
-  currentSlide = (idx + totalSlides) % totalSlides;
-  track.style.transform = `translateX(-${currentSlide * 100}%)`;
-  dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+  currentSlide = (idx + totalSlides) % totalSlides;
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
 }
 function nextSlide() { goSlide(currentSlide + 1); }
 function prevSlide() { goSlide(currentSlide - 1); }
@@ -1201,9 +1226,9 @@ const interviewTrack = document.getElementById('interviewTrack');
 const interviewDots = document.querySelectorAll('#interviewCarousel .carousel-dot');
 
 function goInterview(idx) {
-  currentInterview = (idx + totalInterviews) % totalInterviews;
-  interviewTrack.style.transform = `translateX(-${currentInterview * 100}%)`;
-  interviewDots.forEach((d, i) => d.classList.toggle('active', i === currentInterview));
+  currentInterview = (idx + totalInterviews) % totalInterviews;
+  interviewTrack.style.transform = `translateX(-${currentInterview * 100}%)`;
+  interviewDots.forEach((d, i) => d.classList.toggle('active', i === currentInterview));
 }
 function nextInterview() { goInterview(currentInterview + 1); }
 function prevInterview() { goInterview(currentInterview - 1); }
