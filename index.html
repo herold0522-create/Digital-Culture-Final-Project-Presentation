@@ -384,6 +384,13 @@ nav {
 }
 .iter-link:hover { background:var(--ink); color:var(--paper); border-color:var(--ink); }
 
+/* ─── v3 双端链接组 ─── */
+.iter-link-group {
+  display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:18px;
+}
+.iter-link-group .iter-link { margin-top:0; }
+.iter-link-group .iter-link span.icon { margin-right:4px; }
+
 /* ─── §6 DUAL PLATFORM ─── */
 .dual-section { background:var(--ink); position:relative; overflow:hidden; }
 .dual-section .section-title { color:var(--paper); }
@@ -587,6 +594,7 @@ footer {
   .cta-cards { grid-template-columns:1fr; }
   .rt-item { grid-template-columns:1fr; gap:16px; }
   footer { padding:32px 24px; flex-direction:column; }
+  .iter-link-group { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -604,8 +612,8 @@ footer {
     <li><a href="#platform">双端</a></li>
   </ul>
   <div class="nav-ctas">
-    <a class="nav-pill" href="https://github.com/herold0522-create/Digital-Culture-Project-Info-mobile" target="_blank">移动端介绍 →</a>
-    <a class="nav-pill primary" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">进入产品 →</a>
+    <a class="nav-pill" href="https://herold0522-create.github.io/Digital-Culture-Final-Project-Mobile-by-xinru/" target="_blank">📱 移动端 →</a>
+    <a class="nav-pill primary" href="https://herold0522-create.github.io/Digital-Culture-Final-Project/" target="_blank">🖥️ 网页端 →</a>
   </div>
 </nav>
 
@@ -651,7 +659,7 @@ footer {
       <span class="section-num">§ 01</span>
       <h2 class="section-title">圈子是什么？</h2>
     </div>
-    <p class="section-sub reveal">在正式展开调研之前，我们先梳理 “圈子” 这一概念的本质。单一的圈层环境容易形成无形的信息壁垒，使人陷入固化的信息茧房，局限视野，难以接触多元的视角与未知领域。而圈子并非封闭的围墙，本就与广阔的外界相互联结。我们搭建专属交流平台，打破圈层局限，主动拓宽认知边界，打破信息壁垒，让人们能够接触多元资讯、探索未知领域，跳出固有认知的束缚。</p>
+    <p class="section-sub reveal">在正式展开调研之前，我们先梳理 "圈子" 这一概念的本质。单一的圈层环境容易形成无形的信息壁垒，使人陷入固化的信息茧房，局限视野，难以接触多元的视角与未知领域。而圈子并非封闭的围墙，本就与广阔的外界相互联结。我们搭建专属交流平台，打破圈层局限，主动拓宽认知边界，打破信息壁垒，让人们能够接触多元资讯、探索未知领域，跳出固有认知的束缚。</p>
     <div class="insight-grid">
       <div class="insight-cell reveal d1" data-idx="01">
         <div class="ic-tag amber">磁场与吸引</div>
@@ -821,54 +829,33 @@ footer {
             关键发现：圈子的入场门槛并非刻意设计，而是文化自然沉淀的结果。"黑话"不是排外手段，而是身份确认机制——它在筛选真正的同好方面，比任何表单都有效。
           </div>
 
-          <!-- ════════════════════════════════════════════════════
-               📸 前期观察 · 实景轮播图 — 图片替换说明
-               共 5 张，将下方各 <img> 的 src 属性替换为您的图片链接即可。
-               建议图片尺寸：宽 900px 以上，横版（16:9 或 4:3）。
-               ════════════════════════════════════════════════════ -->
           <div class="carousel-wrap" id="researchCarousel">
             <div class="carousel-track" id="carouselTrack">
-
-              <!-- 【第1张】替换 src 为：街舞社排练室现场照片 -->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427213635_436_7.jpg?raw=true"
-                     alt="街舞社调研现场"
-                     data-replace="【替换此处】街舞社 · 排练室调研实景">
+                     alt="街舞社调研现场">
                 <div class="carousel-caption">街舞社 · 排练室沉浸式观察</div>
               </div>
-
-              <!-- 【第2张】替换 src 为：动漫社活动角落现场照片 -->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427213631_431_7.jpg?raw=true"
-                     alt="动漫社调研现场"
-                     data-replace="【替换此处】动漫社 · 活动角落调研实景">
+                     alt="动漫社调研现场">
                 <div class="carousel-caption">动漫社 · 活动角落精神空间记录</div>
               </div>
-
-              <!-- 【第3张】替换 src 为：书法国风社现场照片 -->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427213638_441_7.jpg?raw=true"
-                     alt="书法国风社调研现场"
-                     data-replace="【替换此处】书法国风社 · 笔墨现场调研实景">
+                     alt="书法国风社调研现场">
                 <div class="carousel-caption">书法国风社 · 笔墨天地现场采集</div>
               </div>
-
-              <!-- 【第4张】替换 src 为：社群成员互动/黑话交流细节照片 -->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427213640_443_7.jpg?raw=true"
-                     alt="社员互动细节"
-                     data-replace="【替换此处】社员专属符号/黑话沟通细节记录">
+                     alt="社员互动细节">
                 <div class="carousel-caption">社员互动 · 捕捉圈子专属符号与默契</div>
               </div>
-
-              <!-- 【第5张】替换 src 为：线下活动/集体聚会场景照片 -->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427213636_438_7.jpg?raw=true"
-                     alt="线下活动观察"
-                     data-replace="【替换此处】线下活动 · 圈子文化在聚会中生长">
+                     alt="线下活动观察">
                 <div class="carousel-caption">线下活动 · 观察圈子文化如何在聚会中生长</div>
               </div>
-
             </div>
             <div class="carousel-controls">
               <div class="carousel-dots" id="carouselDots">
@@ -902,46 +889,28 @@ footer {
             关键发现：超过 80% 的受访者表示，他们有过"想加入某个圈子但不敢开口"的经历。融入焦虑是真实且普遍存在的心理障碍，而非个人问题。
           </div>
 
-          <!-- ════════════════════════════════════════════════════
-               📸 深度访谈 · 过程性图片轮播 — 图片替换说明
-               共 4 张，将下方各 <img> 的 src 属性替换为您的访谈照片链接即可。
-               建议图片尺寸：宽 900px 以上，横版（16:9 或 4:3）。
-               ════════════════════════════════════════════════════ -->
           <div class="carousel-wrap" id="interviewCarousel">
             <div class="carousel-track" id="interviewTrack">
-
-              <!-- 【第1张】替换 src 为：访谈现场全景照（如教室/访谈间布置）-->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427214410_456_7.jpg?raw=true"
-                     alt="访谈现场布置"
-                     data-replace="【替换此处】访谈现场全景 · 教室/访谈间环境">
+                     alt="访谈现场布置">
                 <div class="carousel-caption">访谈现场 · 空间布置与氛围营造</div>
               </div>
-
-              <!-- 【第2张】替换 src 为：访谈进行中照片（采访者与受访者对谈）-->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427214412_458_7.jpg?raw=true"
-                     alt="访谈进行中"
-                     data-replace="【替换此处】访谈进行中 · 采访者与受访者对谈画面">
+                     alt="访谈进行中">
                 <div class="carousel-caption">访谈进行中 · 一对一深度对话记录</div>
               </div>
-
-              <!-- 【第3张】替换 src 为：摄像/录音设备记录照（拍摄、设备细节）-->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427220631_510_7.png?raw=true"
-                     alt="访谈设备记录"
-                     data-replace="【替换此处】录像/录音设备 · 访谈素材拍摄过程">
+                     alt="访谈设备记录">
                 <div class="carousel-caption">素材记录 · 全程录像留存访谈原始影像</div>
               </div>
-
-              <!-- 【第4张】替换 src 为：访谈结束后合影或团队工作照-->
               <div class="carousel-slide">
                 <img src="https://github.com/herold0522-create/Digital-Culture-Final-Project-Presentation/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260427220921_522_7.png?raw=true"
-                     alt="访谈记录"
-                     data-replace="【替换此处】访谈工作照 · 访谈素材拍摄过程">
+                     alt="访谈记录">
                 <div class="carousel-caption">幕后 · 录像剪辑原始影像</div>
               </div>
-
             </div>
             <div class="carousel-controls">
               <div class="carousel-dots" id="interviewDots">
@@ -1021,6 +990,8 @@ footer {
           <a class="iter-link" href="https://darling-rugelach-8e04a8.netlify.app/" target="_blank">查看第二版 ↗</a>
         </div>
       </div>
+
+      <!-- ── v3.0 · 双端链接 ── -->
       <div class="iter-card reveal d3">
         <div class="iter-card-header">
           <div class="iter-ver">v3.0</div>
@@ -1035,9 +1006,18 @@ footer {
             <li>视觉系统全面升级：杂志级排版、Drop Cap 排版</li>
             <li>引入 AI 助手「云中君」，实时响应社群需求</li>
           </ul>
-          <a class="iter-link" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">查看第三版 ↗</a>
+          <!-- 双端跳转按钮组 -->
+          <div class="iter-link-group">
+            <a class="iter-link" href="https://herold0522-create.github.io/Digital-Culture-Final-Project-Mobile-by-xinru/" target="_blank">
+              <span class="icon">📱</span> 移动端 ↗
+            </a>
+            <a class="iter-link" href="https://herold0522-create.github.io/Digital-Culture-Final-Project/" target="_blank">
+              <span class="icon">🖥️</span> 网页端 ↗
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -1145,16 +1125,30 @@ footer {
           <span>🖥️</span>
         </div>
       </a>
-      <a class="cta-card reveal d3" style="border-top:4px solid #6d28d9; background:var(--ink);" href="https://github.com/herold0522-create/Digital-Culture-Final-Project" target="_blank">
+      <div class="cta-card reveal d3" style="border-top:4px solid #6d28d9; background:var(--ink); cursor:default;">
         <div class="cta-card-bg" style="color:rgba(245,242,235,.04);">P</div>
         <div class="cta-card-tag" style="color:rgba(245,242,235,.4);">Final Product · v3.0</div>
         <div class="cta-card-title" style="color:var(--paper);">最终产品<br>数字文化 · 正式上线</div>
         <p class="cta-card-desc" style="color:rgba(245,242,235,.5);">经历三轮迭代、8人用户测试、双端差异化设计后的最终版本。包含完整的圈子广场、兴趣验证机制、AI助手、社群聊天室等核心功能。</p>
-        <div class="cta-card-platform" style="border-color:rgba(245,242,235,.2);color:var(--paper);">
-          <span>进入完整产品</span>
-          <span>🚀</span>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:auto;">
+          <a href="https://herold0522-create.github.io/Digital-Culture-Final-Project-Mobile-by-xinru/" target="_blank"
+             style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+                    padding:10px 14px; border:1.5px solid rgba(245,242,235,.25); display:flex; align-items:center;
+                    justify-content:center; gap:6px; color:var(--paper); text-decoration:none; text-align:center; transition:all .2s;"
+             onmouseover="this.style.background='var(--amber)';this.style.borderColor='var(--amber)';this.style.color='var(--ink)'"
+             onmouseout="this.style.background='transparent';this.style.borderColor='rgba(245,242,235,.25)';this.style.color='var(--paper)'">
+            <span>📱</span><span>移动端</span>
+          </a>
+          <a href="https://herold0522-create.github.io/Digital-Culture-Final-Project/" target="_blank"
+             style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+                    padding:10px 14px; border:1.5px solid rgba(245,242,235,.25); display:flex; align-items:center;
+                    justify-content:center; gap:6px; color:var(--paper); text-decoration:none; text-align:center; transition:all .2s;"
+             onmouseover="this.style.background='var(--amber)';this.style.borderColor='var(--amber)';this.style.color='var(--ink)'"
+             onmouseout="this.style.background='transparent';this.style.borderColor='rgba(245,242,235,.25)';this.style.color='var(--paper)'">
+            <span>🖥️</span><span>网页端</span>
+          </a>
         </div>
-      </a>
+      </div>
     </div>
     <div class="footnote reveal">
       <p>福州大学至诚学院 · 数字文化课题组 · 2026 Spring</p>
@@ -1166,7 +1160,7 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">数字文化<em>.</em> 这个圈子</div>
-  <div class="footer-copy">© 2026 福州大学至诚学院 · 刘依琳 张梦淋 李雨彤 杨诗真 张心如 林晓雨 陈婷婷 韦馨</div>
+  <div class="footer-copy">© 2026 福州大学至诚学院 · 刘依琳 张梦淋 林晓雨 陈婷婷 韦馨 李雨彤 杨诗真 张心如 </div>
 </footer>
 
 <script>
